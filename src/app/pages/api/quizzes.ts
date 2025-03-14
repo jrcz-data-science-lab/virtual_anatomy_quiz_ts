@@ -2,6 +2,17 @@ import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "@/app/lib/dbConnect";
 import Quiz from "@/app/models/Quiz";
 
+/**
+ * Handles GET and POST requests to /api/quizzes
+ *
+ * GET /api/quizzes: Returns a list of all quizzes
+ *
+ * POST /api/quizzes: Creates a new quiz with the provided body
+ *
+ * @param {NextApiRequest} req
+ * @param {NextApiResponse} res
+ * @returns {Promise<Response>}
+ */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

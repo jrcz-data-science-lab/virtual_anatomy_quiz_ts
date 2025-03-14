@@ -10,6 +10,12 @@ if (!MONGODB_URI) {
 
 const options = { bufferCommands: false };
 
+/**
+ * Establishes a connection to MongoDB using the MONGODB_URI environment variable
+ * and performs a `ping` command to verify the connection.
+ *
+ * @returns {Promise<void>}
+ */
 async function dbConnect() {
   try {
     await mongoose.connect(MONGODB_URI, options);
