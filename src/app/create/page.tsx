@@ -103,7 +103,7 @@ export default function CreateQuiz(): JSX.Element {
       />
 
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
         onClick={handleAddQuestion}
       >
         Add Question
@@ -112,6 +112,7 @@ export default function CreateQuiz(): JSX.Element {
       {quiz.questions.map((question, index) => (
         <div key={index}>
           <input
+            className="mt-4 mb-2 block w-full p-2 border border-gray-300 rounded"
             type="text"
             placeholder="Question"
             value={question.question}
@@ -123,7 +124,6 @@ export default function CreateQuiz(): JSX.Element {
               })
             }
           />
-          <button onClick={handleAddQuestion}>Add Question</button>
         </div>
       ))}
       <button
