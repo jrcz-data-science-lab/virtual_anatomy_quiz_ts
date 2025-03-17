@@ -2,6 +2,10 @@
 
 import { JSX, useState } from "react";
 // import RootLayout from "../layout";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import { MenuItem } from "@mui/material";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 /**
  * A Next.js page component that allows users to create a new quiz.
@@ -33,6 +37,12 @@ export default function CreateQuiz(): JSX.Element {
     }[];
   }>({ title: "", description: "", questions: [] });
 
+  const [questionType, setQuestionType] = useState<string>("");
+
+  const handleQuestionTypeChange = (event: SelectChangeEvent) => {
+    setQuestionType(event.target.value);
+  };
+
   const handleAddQuestion = () => {
     setQuiz((prev) => ({
       ...prev,
@@ -40,7 +50,7 @@ export default function CreateQuiz(): JSX.Element {
         ...prev.questions,
         {
           question: "",
-          type: "multiple-choice",
+          type: "",
           options: [],
           correctAnswer: "",
         },
@@ -124,10 +134,32 @@ export default function CreateQuiz(): JSX.Element {
               })
             }
           />
+          <FormControl className="mt-2 mb-2 block w-full">
+            <InputLabel id={`question-type-label-${index}`}>
+              Question Type
+            </InputLabel>
+            <Select
+              labelId="question-type-label"
+              id={`question-type-${index}`}
+              value={questionType || question.type}
+              onChange={(event) => {
+                const newQuestions = [...quiz.questions];
+                newQuestions[index].type = event.target.value;
+                setQuiz((prev) => ({ ...prev, questions: newQuestions }));
+              }}
+              autoWidth
+              label="Question Type"
+            >
+              <MenuItem value="multiple-choice">Multiple Choice</MenuItem>
+              <MenuItem value="true-false">True/False</MenuItem>
+              <MenuItem value="select-organ">Select Organ</MenuItem>
+              <MenuItem value="short-answer">Short Answer</MenuItem>
+            </Select>
+          </FormControl>
         </div>
       ))}
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 rounded"
         onClick={handleSubmit}
       >
         Submit
