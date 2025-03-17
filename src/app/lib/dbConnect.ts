@@ -16,16 +16,19 @@ const options = { bufferCommands: false };
  *
  * @returns {Promise<void>}
  */
-async function dbConnect() {
+async function dbConnect(): Promise<void> {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
   try {
     await mongoose.connect(MONGODB_URI, options);
-    await mongoose.connection.db?.admin().command({ ping: 1 });
     console.log("Connected to MongoDB");
-  } finally {
-    await mongoose.disconnect();
+  } catch (error) {
+    console.error("Failed to connect to MongoDB", error);
   }
 }
 
-dbConnect().catch(console.error);
+// dbConnect().catch(console.error);
 
 export default dbConnect;
