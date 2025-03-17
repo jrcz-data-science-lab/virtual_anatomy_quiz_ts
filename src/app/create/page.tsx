@@ -8,22 +8,18 @@ import { MenuItem } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 /**
- * A Next.js page component that allows users to create a new quiz.
+ * A form component for creating a quiz.
  *
- * The component renders a form with input fields for the quiz title, description, and questions.
- * Each question has an input field for the question text and an "Add Question" button to add a new
- * question to the quiz.
- * The form also has a "Submit" button to submit the quiz to the server.
+ * The component renders a form with input fields for the quiz title and
+ * description, as well as a list of questions. Each question has input fields
+ * for the question text, type, options, and correct answer. The component also
+ * renders a button to add a new question, and a button to submit the quiz.
  *
- * The component uses the useState hook to store the quiz data in the component's state.
- * The data is initialized with empty strings for the title and description, and an empty array
- * for the questions.
- *
- * The component also uses the useEffect hook to fetch the quiz data from the server when the
- * component mounts.
- * The fetched data is stored in the component's state and used to initialize the form fields.
- *
- * @returns {JSX.Element} The rendered component.
+ * When the submit button is clicked, the component filters out any questions
+ * with empty question text, and if there are any empty questions, it alerts the
+ * user and does not submit the quiz. Otherwise, it sends a POST request to the
+ * server with the sanitized quiz data, and alerts the user whether the quiz was
+ * created successfully or not.
  */
 export default function CreateQuiz(): JSX.Element {
   const [quiz, setQuiz] = useState<{
