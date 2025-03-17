@@ -1,7 +1,7 @@
 "use client";
 
 import { JSX, useState } from "react";
-import RootLayout from "../layout";
+// import RootLayout from "../layout";
 
 /**
  * A Next.js page component that allows users to create a new quiz.
@@ -26,7 +26,7 @@ export default function CreateQuiz(): JSX.Element {
     title: string;
     description: string;
     questions: {
-      text: string;
+      question: string;
       type: string;
       options: string[];
       correctAnswer: string;
@@ -38,63 +38,100 @@ export default function CreateQuiz(): JSX.Element {
       ...prev,
       questions: [
         ...prev.questions,
-        { text: "", type: "multiple-choice", options: [], correctAnswer: "" },
+        {
+          question: "",
+          type: "multiple-choice",
+          options: [],
+          correctAnswer: "",
+        },
       ],
     }));
   };
 
+  /**
+   * Handles the submission of the quiz form.
+   *
+   * The function first filters out any questions with empty question text, and
+   * if there are any empty questions, it alerts the user and does not submit the
+   * quiz.
+   *
+   * Otherwise, it sends a POST request to the server with the sanitized quiz
+   * data, and alerts the user whether the quiz was created successfully or not.
+   */
   const handleSubmit = async () => {
+    const validQuestions = quiz.questions.filter(
+      (q) => q.question.trim() !== ""
+    );
+
+    if (validQuestions.length !== quiz.questions.length) {
+      alert("Please fill out all questions before submitting the quiz.");
+      return;
+    }
+
+    const sanitizedQuiz = {
+      ...quiz,
+      questions: validQuestions,
+    };
+
     const response = await fetch("/api/quizzes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(quiz),
+      body: JSON.stringify(sanitizedQuiz),
     });
     if (response.ok) {
       alert("Quiz created successfully!");
+    } else {
+      alert("Failed to create quiz.");
     }
   };
 
   return (
-    <RootLayout>
-      <div>
-        <h1 className="text-3xl font-bold">Create a Quiz</h1>
-        <input
-          type="text"
-          placeholder="Title"
-          value={quiz.title}
-          onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
-          className="mt-4 mb-2 block w-full p-2 border border-gray-300 rounded"
-        />
-        <textarea
-          placeholder="Description"
-          value={quiz.description}
-          onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
-          className="mt-2 mb-4 block w-full p-2 border border-gray-300 rounded"
-        />
-        {quiz.questions.map((question, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              placeholder="Question"
-              value={question.text}
-              onChange={(e) =>
-                setQuiz((prev) => {
-                  const newQuestions = [...prev.questions];
-                  newQuestions[index].text = e.target.value;
-                  return { ...prev, questions: newQuestions };
-                })
-              }
-            />
-            <button onClick={handleAddQuestion}>Add Question</button>
-          </div>
-        ))}
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
-      </div>
-    </RootLayout>
+    <div>
+      <h1 className="text-3xl font-bold">Create a Quiz</h1>
+      <input
+        type="text"
+        placeholder="Title"
+        value={quiz.title}
+        onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
+        className="mt-4 mb-2 block w-full p-2 border border-gray-300 rounded"
+      />
+      <textarea
+        placeholder="Description"
+        value={quiz.description}
+        onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
+        className="mt-2 mb-4 block w-full p-2 border border-gray-300 rounded"
+      />
+
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={handleAddQuestion}
+      >
+        Add Question
+      </button>
+
+      {quiz.questions.map((question, index) => (
+        <div key={index}>
+          <input
+            type="text"
+            placeholder="Question"
+            value={question.question}
+            onChange={(e) =>
+              setQuiz((prev) => {
+                const newQuestions = [...prev.questions];
+                newQuestions[index].question = e.target.value;
+                return { ...prev, questions: newQuestions };
+              })
+            }
+          />
+          <button onClick={handleAddQuestion}>Add Question</button>
+        </div>
+      ))}
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={handleSubmit}
+      >
+        Submit
+      </button>
+    </div>
   );
 }
