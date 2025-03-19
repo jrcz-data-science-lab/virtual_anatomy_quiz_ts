@@ -21,6 +21,8 @@ export default async function Home() {
             </CardHeader>
             <CardContent>
               <p>Status : {quiz.status}</p>
+              <p>Questions : {quiz.questions.length}</p>
+              {/* Add planned date later */}
             </CardContent>
           </Card>
         ))}
