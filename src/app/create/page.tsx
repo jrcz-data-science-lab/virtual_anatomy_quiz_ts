@@ -94,7 +94,7 @@ export default function CreateQuiz(): JSX.Element {
   };
 
   return (
-    <div>
+    <div className="p-2 m-2">
       <h1 className="text-3xl font-bold">Create a Quiz</h1>
       <input
         type="text"
