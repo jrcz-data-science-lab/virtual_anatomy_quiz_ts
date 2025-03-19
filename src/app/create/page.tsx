@@ -87,6 +87,7 @@ export default function CreateQuiz(): JSX.Element {
     });
     if (response.ok) {
       alert("Quiz created successfully!");
+      setQuiz({ title: "", description: "", questions: [] });
     } else {
       alert("Failed to create quiz.");
     }
