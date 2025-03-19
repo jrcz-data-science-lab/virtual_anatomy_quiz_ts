@@ -5,6 +5,7 @@ import { JSX, useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import { MenuItem } from "@mui/material";
+import Divider from "@mui/material/Divider";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 /**
@@ -152,6 +153,7 @@ export default function CreateQuiz(): JSX.Element {
               <MenuItem value="short-answer">Short Answer</MenuItem>
             </Select>
           </FormControl>
+          <Divider className="py-2" />
         </div>
       ))}
       <button
