@@ -55,7 +55,7 @@ export function DateTimePicker24h({
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
           {date ? (
-            format(date, "dd/MM/yyyy hh:mm")
+            format(date, "dd/MM/yyyy HH:mm")
           ) : (
             <span>DD/MM/YYYY hh:mm</span>
           )}
