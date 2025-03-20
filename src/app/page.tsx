@@ -38,7 +38,14 @@ export default async function Home() {
                 <CardContent>
                   <p>Status : {quiz.status}</p>
                   <p>Questions : {quiz.questions.length}</p>
-                  {/* Add planned date later */}
+                  <p>
+                    Scheduled At :{" "}
+                    {quiz.scheduledAt === null
+                      ? "Not Scheduled"
+                      : new Date(quiz.scheduledAt).toLocaleString("nl-NL", {
+                          hour12: false,
+                        })}
+                  </p>
                 </CardContent>
               </Card>
             </Link>
