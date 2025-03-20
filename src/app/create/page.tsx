@@ -89,6 +89,7 @@ export default function CreateQuiz(): JSX.Element {
     });
     if (response.ok) {
       alert("Quiz created successfully!");
+      // Reset the form after successful submission
       setQuiz({
         title: "",
         description: "",

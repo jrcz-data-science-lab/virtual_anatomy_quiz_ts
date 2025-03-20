@@ -40,6 +40,12 @@ export function DateTimePicker24h({
     }
   };
 
+  /**
+   * Handles changes to the time input fields by updating the date state.
+   *
+   * @param {string} type The type of time input field that was changed (either "hour" or "minute").
+   * @param {string} value The new value of the time input field.
+   */
   const handleTimeChange = (type: "hour" | "minute", value: string) => {
     if (date) {
       const newDate = new Date(date);
