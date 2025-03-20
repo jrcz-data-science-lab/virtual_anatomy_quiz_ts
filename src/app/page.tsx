@@ -28,7 +28,10 @@ export default async function Home() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-4">
           {quizzes.map((quiz) => (
             <Link key={quiz._id as string} href={`/edit/${quiz._id as string}`}>
-              <Card key={quiz.id} className="h-full">
+              <Card
+                key={quiz.id}
+                className="h-full hover:shadow-lg hover:bg-gray-100 cursor-pointer"
+              >
                 <CardHeader>
                   <CardTitle>{quiz.title}</CardTitle>
                 </CardHeader>
