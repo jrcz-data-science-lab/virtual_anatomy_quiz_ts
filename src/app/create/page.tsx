@@ -57,22 +57,14 @@ export default function CreateQuiz(): JSX.Element {
     }));
   };
 
-  // const handleDateChange = (date: Date | null) => {
-  //   setQuiz((prev) => ({
-  //     ...prev,
-  //     scheduledAt: date ?? undefined,
-  //   }));
-  // };
-
   /**
    * Handles the submission of the quiz form.
    *
-   * The function first filters out any questions with empty question text, and
-   * if there are any empty questions, it alerts the user and does not submit the
-   * quiz.
-   *
-   * Otherwise, it sends a POST request to the server with the sanitized quiz
-   * data, and alerts the user whether the quiz was created successfully or not.
+   * When the submit button is clicked, this function is called. It first filters
+   * out any questions with empty question text, and if there are any empty
+   * questions, it alerts the user and does not submit the quiz. Otherwise, it
+   * sends a POST request to the server with the sanitized quiz data, and alerts
+   * the user whether the quiz was created successfully or not.
    */
   const handleSubmit = async () => {
     const validQuestions = quiz.questions.filter(

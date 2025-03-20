@@ -14,6 +14,15 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
+// I found this component online, so don't ask me how it works
+
+/**
+ * A 24h datetime picker component.
+ *
+ * @param {Date | undefined} date The currently selected date.
+ * @param {(date: Date | undefined) => void} setDate The function to be called when the date is changed.
+ * @returns {JSX.Element} The datetime picker component.
+ */
 export function DateTimePicker24h({
   date,
   setDate,
