@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import { MenuItem } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { DateTimePicker24h } from "../components/DateTimePicker";
 
 /**
  * A form component for creating a quiz.
@@ -32,7 +33,8 @@ export default function CreateQuiz(): JSX.Element {
       options: string[];
       correctAnswer: string;
     }[];
-  }>({ title: "", description: "", questions: [] });
+    scheduledAt?: Date | undefined;
+  }>({ title: "", description: "", questions: [], scheduledAt: undefined });
 
   const [questionType, setQuestionType] = useState<string>("");
 
@@ -54,6 +56,13 @@ export default function CreateQuiz(): JSX.Element {
       ],
     }));
   };
+
+  // const handleDateChange = (date: Date | null) => {
+  //   setQuiz((prev) => ({
+  //     ...prev,
+  //     scheduledAt: date ?? undefined,
+  //   }));
+  // };
 
   /**
    * Handles the submission of the quiz form.
@@ -78,6 +87,7 @@ export default function CreateQuiz(): JSX.Element {
     const sanitizedQuiz = {
       ...quiz,
       questions: validQuestions,
+      scheduledAt: quiz.scheduledAt?.toISOString() || null,
     };
 
     const response = await fetch("/api/quizzes", {
@@ -87,7 +97,12 @@ export default function CreateQuiz(): JSX.Element {
     });
     if (response.ok) {
       alert("Quiz created successfully!");
-      setQuiz({ title: "", description: "", questions: [] });
+      setQuiz({
+        title: "",
+        description: "",
+        questions: [],
+        scheduledAt: undefined,
+      });
     } else {
       alert("Failed to create quiz.");
     }
@@ -108,6 +123,11 @@ export default function CreateQuiz(): JSX.Element {
         value={quiz.description}
         onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
         className="mt-2 mb-4 block w-full p-2 border border-gray-300 rounded"
+      />
+
+      <DateTimePicker24h
+        date={quiz.scheduledAt}
+        setDate={(date) => setQuiz({ ...quiz, scheduledAt: date })}
       />
 
       <button

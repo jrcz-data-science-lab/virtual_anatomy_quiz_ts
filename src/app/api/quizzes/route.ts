@@ -47,7 +47,12 @@ export async function POST(req: Request): Promise<NextResponse> {
       );
     }
 
-    const quiz = new Quiz(body);
+    const quizData = {
+      ...body,
+      scheduledAt: body.scheduledAt ? new Date(body.scheduledAt) : undefined,
+    };
+
+    const quiz = new Quiz(quizData);
     await quiz.save();
     console.log(body);
     return NextResponse.json(quiz, { status: 201 });

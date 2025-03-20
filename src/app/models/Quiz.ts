@@ -10,7 +10,9 @@ interface IQuestion {
 export interface IQuiz extends Document {
   title: string;
   description: string;
+  // status?: "Planned" | "In Progress" | "Completed";
   questions: IQuestion[];
+  scheduledAt?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -27,6 +29,7 @@ const QuizSchema = new Schema<IQuiz>(
     title: { type: String, required: true },
     description: { type: String, required: true },
     questions: { type: [QuestionSchema], required: true },
+    scheduledAt: { type: Date, required: false, default: null },
   },
   { timestamps: true }
 );
