@@ -13,6 +13,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { JSX } from "react";
 
 // I found this component online, so don't ask me how it works
 
@@ -29,8 +30,7 @@ export function DateTimePicker24h({
 }: {
   date: Date | undefined;
   setDate: (date: Date | undefined) => void;
-}) {
-  // const [date, setDate] = React.useState<Date>();
+}): JSX.Element {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const hours = Array.from({ length: 24 }, (_, i) => i);
