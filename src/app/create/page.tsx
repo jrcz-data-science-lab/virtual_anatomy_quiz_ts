@@ -5,7 +5,8 @@ import { JSX, useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import { MenuItem } from "@mui/material";
-import Divider from "@mui/material/Divider";
+// import Divider from "@mui/material/Divider";
+import { Separator } from "@/components/ui/separator";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { DateTimePicker24h } from "../components/DateTimePicker";
 
@@ -118,10 +119,12 @@ export default function CreateQuiz(): JSX.Element {
         className="mt-2 mb-4 block w-full p-2 border border-gray-300 rounded"
       />
 
-      <DateTimePicker24h
-        date={quiz.scheduledAt}
-        setDate={(date) => setQuiz({ ...quiz, scheduledAt: date })}
-      />
+      <div className="pb-4">
+        <DateTimePicker24h
+          date={quiz.scheduledAt}
+          setDate={(date) => setQuiz({ ...quiz, scheduledAt: date })}
+        />
+      </div>
 
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
@@ -167,11 +170,11 @@ export default function CreateQuiz(): JSX.Element {
               <MenuItem value="short-answer">Short Answer</MenuItem>
             </Select>
           </FormControl>
-          <Divider className="py-2" />
+          <Separator className="my-4" />
         </div>
       ))}
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 rounded"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         onClick={handleSubmit}
       >
         Submit
