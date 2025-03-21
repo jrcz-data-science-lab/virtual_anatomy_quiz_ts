@@ -19,6 +19,10 @@ import Link from "next/link";
 export default async function Home() {
   const quizzes = await getQuizzes();
 
+  // ! Add search bar to filter quizzes by title
+  // ! Add pagination to limit the number of quizzes displayed
+  // ! Add sorting options to sort quizzes by title, status, or number of questions
+
   return (
     <div>
       <h1 className="text-3xl font-bold">Quizzes</h1>
