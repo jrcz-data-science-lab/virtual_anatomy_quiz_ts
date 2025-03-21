@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
         </nav>
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://i.pinimg.com/736x/b4/bb/b2/b4bbb2198b036fe1024571ec6b60f8b8.jpg" />
           <AvatarFallback>XD</AvatarFallback>
         </Avatar>
       </div>
