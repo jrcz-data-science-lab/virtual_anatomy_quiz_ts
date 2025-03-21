@@ -25,3 +25,27 @@ export async function GET(
     return NextResponse.json({ error: "Failed to get quiz" }, { status: 500 });
   }
 }
+
+export async function PUT(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  await dbConnect();
+  const id = params.id;
+
+  try {
+    const body = await req.json();
+    const updatedQuiz = await Quiz.findByIdAndUpdate(id, body, { new: true });
+
+    if (!updatedQuiz) {
+      return NextResponse.json({ error: "Quiz not found" }, { status: 404 });
+    }
+
+    return NextResponse.json(updatedQuiz, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to update quiz" },
+      { status: 500 }
+    );
+  }
+}
