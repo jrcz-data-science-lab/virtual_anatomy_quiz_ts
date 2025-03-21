@@ -33,20 +33,22 @@ export default async function EditQuiz({
     return <div>Quiz not found</div>;
   }
 
+  const plainQuiz = JSON.parse(JSON.stringify(quiz));
+
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-3xl font-bold mb-4">
-        {quiz.title} -{" "}
-        {quiz.scheduledAt === null
+        {plainQuiz.title} -{" "}
+        {plainQuiz.scheduledAt === null
           ? "Not Scheduled"
-          : quiz.scheduledAt?.toLocaleString()}
+          : plainQuiz.scheduledAt?.toLocaleString()}
       </h1>
       <EditQuizForm
         id={params.id}
-        initialTitle={quiz.title}
-        initialDescription={quiz.description}
-        initialQuestions={quiz.questions}
-        initialScheduledAt={quiz.scheduledAt}
+        initialTitle={plainQuiz.title}
+        initialDescription={plainQuiz.description}
+        initialQuestions={plainQuiz.questions}
+        initialScheduledAt={plainQuiz.scheduledAt}
       />
     </div>
   );
