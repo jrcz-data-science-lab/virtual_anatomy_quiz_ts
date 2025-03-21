@@ -12,6 +12,7 @@ import Link from "next/link";
 export default async function PlannedQuizzes() {
   const quizzes = await getQuizzes();
 
+  // ! Hide quizzes that are not scheduled (scheduledAt === null)
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Planned Quizzes</h1>
