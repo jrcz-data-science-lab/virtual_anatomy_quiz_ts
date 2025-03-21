@@ -16,7 +16,7 @@ export default async function EditQuiz({
   params: { id: string };
 }): Promise<JSX.Element> {
   await dbConnect();
-  const { id } = await params;
+  const id = params.id;
   const quiz = await Quiz.findById(id).lean<{
     title: string;
     description: string;
@@ -48,60 +48,6 @@ export default async function EditQuiz({
         initialQuestions={quiz.questions}
         initialScheduledAt={quiz.scheduledAt}
       />
-      {/* <form>
-        <div className="mb-4">
-          <label
-            htmlFor="title"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Title
-          </label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            defaultValue={quiz.title}
-            className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="description"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Description
-          </label>
-          <textarea
-            id="description"
-            name="description"
-            defaultValue={quiz.description}
-            className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-        </div>
-        {quiz.questions.map((question, index) => (
-          <div key={index} className="mb-4">
-            <label
-              htmlFor={`question-${index}`}
-              className="block mb-2 text-sm font-medium text-gray-900"
-            >
-              Question
-            </label>
-            <input
-              type="text"
-              id={`question-${index}`}
-              name={`question-${index}`}
-              defaultValue={question.question}
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            />
-          </div>
-        ))}
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Save
-        </button>
-      </form> */}
     </div>
   );
 }
