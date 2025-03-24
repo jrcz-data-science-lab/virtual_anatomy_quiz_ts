@@ -10,11 +10,12 @@ import { JSX } from "react";
  * @param {{ params: { id: string } }} props - The props object containing the quiz id
  * @returns {JSX.Element} A JSX element containing the form for editing the quiz
  */
-export default async function EditQuiz({
-  params,
-}: {
-  params: { id: string };
-}): Promise<JSX.Element> {
+export default async function EditQuiz(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+): Promise<JSX.Element> {
+  const params = await props.params;
   await dbConnect();
   const id = params.id;
   const quiz = await Quiz.findById(id).lean<{

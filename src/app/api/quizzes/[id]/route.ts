@@ -11,10 +11,8 @@ import Quiz from "@/app/models/Quiz";
  * the quiz and a status code of 200 on success, or an error message with a status code of
  * 404 if the quiz is not found, or an error message with a status code of 500 on failure.
  */
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
-): Promise<NextResponse> {
+export async function GET(req: Request, props: { params: Promise<{ id: string }> }): Promise<NextResponse> {
+  const params = await props.params;
   try {
     await dbConnect();
     const quiz = await Quiz.findById(params.id);
@@ -26,10 +24,8 @@ export async function GET(
   }
 }
 
-export async function PUT(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
+export async function PUT(req: Request, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   await dbConnect();
   const id = params.id;
 
