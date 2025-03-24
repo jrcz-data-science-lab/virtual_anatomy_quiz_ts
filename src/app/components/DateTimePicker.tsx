@@ -40,6 +40,8 @@ export function DateTimePicker24h({
     }
   };
 
+  const disabledDates = (date: Date) => date < new Date();
+
   /**
    * Handles changes to the time input fields by updating the date state.
    *
@@ -82,6 +84,7 @@ export function DateTimePicker24h({
             mode="single"
             selected={date}
             onSelect={handleDateSelect}
+            disabled={disabledDates}
             initialFocus
           />
           <div className="flex flex-col sm:flex-row sm:h-[300px] divide-y sm:divide-y-0 sm:divide-x">
