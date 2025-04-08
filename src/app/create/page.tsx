@@ -103,82 +103,90 @@ export default function CreateQuiz(): JSX.Element {
   };
 
   return (
-    <div className="p-2 m-2">
-      <h1 className="text-3xl font-bold">Create a Quiz</h1>
-      <input
-        type="text"
-        placeholder="Title"
-        value={quiz.title}
-        onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
-        className="mt-4 mb-2 block w-full p-2 border border-gray-300 rounded"
-      />
-      <textarea
-        placeholder="Description"
-        value={quiz.description}
-        onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
-        className="mt-2 mb-4 block w-full p-2 border border-gray-300 rounded"
-      />
+    <div className="p-4">
+      <h1 className="text-3xl font-bold mb-6">Create a Quiz</h1>
 
-      <div className="pb-4">
-        <DateTimePicker24h
-          date={quiz.scheduledAt}
-          setDate={(date) => setQuiz({ ...quiz, scheduledAt: date })}
-        />
-      </div>
-
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
-        onClick={handleAddQuestion}
-      >
-        Add Question
-      </button>
-
-      {quiz.questions.map((question, index) => (
-        <div key={index}>
+      <div className="flex flex-col md:flex-row gap-4">
+        {/* LEFT COLUMN */}
+        <div className="flex-1 space-y-4">
           <input
-            className="mt-4 mb-2 block w-full p-2 border border-gray-300 rounded"
             type="text"
-            placeholder="Question"
-            value={question.question}
-            onChange={(e) =>
-              setQuiz((prev) => {
-                const newQuestions = [...prev.questions];
-                newQuestions[index].question = e.target.value;
-                return { ...prev, questions: newQuestions };
-              })
-            }
+            placeholder="Title"
+            value={quiz.title}
+            onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
+            className="w-full p-2 border border-gray-300 rounded"
           />
-          <FormControl className="mt-2 mb-2 block w-full">
-            <InputLabel id={`question-type-label-${index}`}>
-              Question Type
-            </InputLabel>
-            <Select
-              labelId="question-type-label"
-              id={`question-type-${index}`}
-              value={questionType || question.type}
-              onChange={(event) => {
-                const newQuestions = [...quiz.questions];
-                newQuestions[index].type = event.target.value;
-                setQuiz((prev) => ({ ...prev, questions: newQuestions }));
-              }}
-              autoWidth
-              label="Question Type"
-            >
-              <MenuItem value="multiple-choice">Multiple Choice</MenuItem>
-              <MenuItem value="true-false">True/False</MenuItem>
-              <MenuItem value="select-organ">Select Organ</MenuItem>
-              <MenuItem value="short-answer">Short Answer</MenuItem>
-            </Select>
-          </FormControl>
-          <Separator className="my-4" />
+          <textarea
+            placeholder="Description"
+            value={quiz.description}
+            onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
+            className="w-full p-2 border border-gray-300 rounded"
+            rows={4}
+          />
+          <DateTimePicker24h
+            date={quiz.scheduledAt}
+            setDate={(date) => setQuiz({ ...quiz, scheduledAt: date })}
+          />
         </div>
-      ))}
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
+
+        {/* RIGHT COLUMN */}
+        <div className="flex-1 space-y-4">
+          {quiz.questions.map((question, index) => (
+            <div key={index}>
+              <input
+                className="w-full p-2 border border-gray-300 rounded mb-4"
+                type="text"
+                placeholder="Question"
+                value={question.question}
+                onChange={(e) =>
+                  setQuiz((prev) => {
+                    const newQuestions = [...prev.questions];
+                    newQuestions[index].question = e.target.value;
+                    return { ...prev, questions: newQuestions };
+                  })
+                }
+              />
+              <FormControl fullWidth className="mt-2">
+                <InputLabel id={`question-type-label-${index}`}>
+                  Question Type
+                </InputLabel>
+                <Select
+                  labelId={`question-type-label-${index}`}
+                  id={`question-type-${index}`}
+                  value={questionType || question.type}
+                  onChange={(event) => {
+                    const newQuestions = [...quiz.questions];
+                    newQuestions[index].type = event.target.value;
+                    setQuiz((prev) => ({ ...prev, questions: newQuestions }));
+                  }}
+                  label="Question Type"
+                >
+                  <MenuItem value="multiple-choice">Multiple Choice</MenuItem>
+                  <MenuItem value="true-false">True/False</MenuItem>
+                  <MenuItem value="select-organ">Select Organ</MenuItem>
+                  <MenuItem value="short-answer">Short Answer</MenuItem>
+                </Select>
+              </FormControl>
+              <Separator className="my-4" />
+            </div>
+          ))}
+
+          <div className="flex gap-2 justify-end">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+              onClick={handleAddQuestion}
+            >
+              Add Question
+            </button>
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+              onClick={handleSubmit}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
