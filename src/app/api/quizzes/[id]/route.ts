@@ -11,7 +11,10 @@ import Quiz from "@/app/models/Quiz";
  * the quiz and a status code of 200 on success, or an error message with a status code of
  * 404 if the quiz is not found, or an error message with a status code of 500 on failure.
  */
-export async function GET(req: Request, props: { params: Promise<{ id: string }> }): Promise<NextResponse> {
+export async function GET(
+  req: Request,
+  props: { params: Promise<{ id: string }> }
+): Promise<NextResponse> {
   const params = await props.params;
   try {
     await dbConnect();
@@ -24,7 +27,19 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
   }
 }
 
-export async function PUT(req: Request, props: { params: Promise<{ id: string }> }) {
+/**
+ * Handles PUT requests to update a quiz by id in the database.
+ *
+ * @param {Request} req - The request object containing the updated quiz data in the body.
+ * @param {{ params: Promise<{ id: string }> }} props - The props object containing the quiz id.
+ * @returns {Promise<NextResponse>} A promise that resolves with a JSON response containing
+ * the updated quiz and a status code of 200 on success, or an error message with a status
+ * code of 404 if the quiz is not found, or an error message with a status code of 500 on failure.
+ */
+export async function PUT(
+  req: Request,
+  props: { params: Promise<{ id: string }> }
+): Promise<NextResponse> {
   const params = await props.params;
   await dbConnect();
   const id = params.id;
