@@ -18,7 +18,7 @@ export default async function PlannedQuizzes() {
   });
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Planned Quizzes</h1>
       {filteredQuizzes.length === 0 ? (
         <p>No planned quizzes found</p>

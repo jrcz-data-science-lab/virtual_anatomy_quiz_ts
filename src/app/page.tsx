@@ -24,7 +24,7 @@ export default async function Home() {
   // ! Add sorting options to sort quizzes by title, status, or number of questions
 
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold">Quizzes</h1>
       {quizzes.length === 0 ? (
         <p>No quizzes found</p>
