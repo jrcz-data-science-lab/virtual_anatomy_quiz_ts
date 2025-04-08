@@ -1,10 +1,15 @@
 import mongoose, { Schema, Document } from "mongoose";
 
+interface IAnswer {
+  text: String;
+  isCorrect: Boolean;
+}
+
 interface IQuestion {
   question: string;
   type: "multiple-choice" | "true-false" | "select-organ" | "short-answer";
-  options?: string[];
-  correctAnswer?: string;
+  answers?: IAnswer[];
+  expectedOrganId?: string; // for select-organ type
 }
 
 export interface IQuiz extends Document {
@@ -17,11 +22,17 @@ export interface IQuiz extends Document {
   updatedAt: Date;
 }
 
+const AnswerSchema = new Schema<IAnswer>({
+  text: { type: String, required: true },
+  isCorrect: { type: Boolean, required: true },
+});
+
 const QuestionSchema = new Schema<IQuestion>({
   question: { type: String, required: true },
   type: { type: String, required: true },
-  options: { type: [String], required: false },
-  correctAnswer: { type: String, required: false },
+  answers: { type: [AnswerSchema], required: false },
+  // correctAnswer: { type: String, required: false },
+  expectedOrganId: { type: String, required: false }, // for select-organ type
 });
 
 const QuizSchema = new Schema<IQuiz>(

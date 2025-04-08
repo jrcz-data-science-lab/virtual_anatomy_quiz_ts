@@ -31,8 +31,11 @@ export default function CreateQuiz(): JSX.Element {
     questions: {
       question: string;
       type: string;
-      options: string[];
-      correctAnswer: string;
+      answers?: {
+        text: string;
+        isCorrect: boolean;
+      }[];
+      expectedOrganId?: string;
     }[];
     scheduledAt?: Date | undefined;
   }>({ title: "", description: "", questions: [], scheduledAt: undefined });
@@ -51,8 +54,8 @@ export default function CreateQuiz(): JSX.Element {
         {
           question: "",
           type: "",
-          options: [],
-          correctAnswer: "",
+          answers: [],
+          expectedOrganId: "", // optional 😛
         },
       ],
     }));
@@ -167,6 +170,60 @@ export default function CreateQuiz(): JSX.Element {
                   <MenuItem value="short-answer">Short Answer</MenuItem>
                 </Select>
               </FormControl>
+              {question.type === "multiple-choice" ||
+              question.type === "true-false" ? (
+                <>
+                  {question.answers?.map((answer, aIdx) => (
+                    <div key={aIdx} className="flex items-center gap-2 my-2">
+                      <input
+                        type="text"
+                        placeholder={`Answer ${aIdx + 1}`}
+                        value={answer.text}
+                        onChange={(e) => {
+                          const newQuestions = [...quiz.questions];
+                          newQuestions[index].answers![aIdx].text =
+                            e.target.value;
+                          setQuiz((prev) => ({
+                            ...prev,
+                            questions: newQuestions,
+                          }));
+                        }}
+                        className="flex-1 p-2 border border-gray-300 rounded"
+                      />
+                      <label>
+                        Correct:
+                        <input
+                          type="checkbox"
+                          checked={answer.isCorrect}
+                          onChange={(e) => {
+                            const newQuestions = [...quiz.questions];
+                            newQuestions[index].answers![aIdx].isCorrect =
+                              e.target.checked;
+                            setQuiz((prev) => ({
+                              ...prev,
+                              questions: newQuestions,
+                            }));
+                          }}
+                          className="ml-2"
+                        />
+                      </label>
+                    </div>
+                  ))}
+                  <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mt-2"
+                    onClick={() => {
+                      const newQuestions = [...quiz.questions];
+                      newQuestions[index].answers!.push({
+                        text: "",
+                        isCorrect: false,
+                      });
+                      setQuiz((prev) => ({ ...prev, questions: newQuestions }));
+                    }}
+                  >
+                    + Add Answer
+                  </button>
+                </>
+              ) : null}
               <Separator className="my-4" />
             </div>
           ))}
