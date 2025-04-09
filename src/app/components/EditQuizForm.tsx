@@ -1,6 +1,7 @@
 "use client";
 
 import { JSX, useState } from "react";
+import EditQuestionBox from "./EditQuestionBox";
 
 interface Answer {
   text: string;
@@ -187,62 +188,29 @@ export default function EditQuizForm({
         />
       </div>
       {questions.map((question, index) => (
-        <div key={index} className="mb-6 border border-gray-300 rounded-lg p-4">
-          <label className="block text-sm font-medium text-gray-900 mb-2">
-            Question {index + 1}
-          </label>
-          <input
-            type="text"
-            value={question.question}
-            onChange={(e) => handleQuestionChange(index, e.target.value)}
-            className="mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 font-bold"
-            placeholder="Enter question text"
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {question.answers.map((answer, answerIndex) => (
-              <div key={answerIndex} className="flex items-center gap-2">
-                <input
-                  type="radio"
-                  name={`correct-answer-${index}`}
-                  checked={answer.isCorrect}
-                  onChange={() => {
-                    setQuestions((prev) =>
-                      prev.map((q, i) =>
-                        i === index
-                          ? {
-                              ...q,
-                              answers: q.answers.map((a, j) => ({
-                                ...a,
-                                isCorrect: j === answerIndex,
-                              })),
-                            }
-                          : q
-                      )
-                    );
-                  }}
-                />
-                <input
-                  type="text"
-                  value={answer.text}
-                  onChange={(e) =>
-                    handleAnswerChange(index, answerIndex, e.target.value)
-                  }
-                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2"
-                  placeholder={`Answer ${answerIndex + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={() => handleAddAnswer(index)}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1.5 px-4 rounded mt-3"
-          >
-            Add answer
-          </button>
-        </div>
+        <EditQuestionBox
+          key={index}
+          index={index}
+          question={question}
+          onChangeQuestion={handleQuestionChange}
+          onChangeAnswer={handleAnswerChange}
+          onSetCorrect={(questionIndex, answerIndex) =>
+            setQuestions((prev) =>
+              prev.map((q, i) =>
+                i === questionIndex
+                  ? {
+                      ...q,
+                      answers: q.answers.map((a, j) => ({
+                        ...a,
+                        isCorrect: j === answerIndex,
+                      })),
+                    }
+                  : q
+              )
+            )
+          }
+          onAddAnswer={handleAddAnswer}
+        />
       ))}
 
       <button
