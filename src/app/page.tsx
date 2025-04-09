@@ -35,7 +35,7 @@ export default async function Home() {
   }));
 
   // ! Add pagination to limit the number of quizzes displayed
-  // ! Add sorting options to sort quizzes by title, status, or number of questions
+  // ! Add filtering options to sort quizzes by title, status, or number of questions
 
   return (
     <div className="container mx-auto p-4">
