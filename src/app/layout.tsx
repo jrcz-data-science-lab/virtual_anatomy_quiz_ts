@@ -32,6 +32,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Navbar />
         <main className="container mx-auto p-4">{children}</main>
