@@ -15,7 +15,7 @@ import {
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { JSX } from "react";
 
-// I found this component online, so don't ask me how it works
+// I found this component online (https://time.rdsx.dev/), so don't ask me how it works.
 
 /**
  * A 24h datetime picker component.
