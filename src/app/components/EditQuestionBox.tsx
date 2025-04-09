@@ -78,7 +78,7 @@ export default function EditQuestionBox({
       <button
         type="button"
         onClick={() => onAddAnswer(index)}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1.5 px-4 rounded mt-3"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1.5 px-4 rounded mt-4"
       >
         Add answer
       </button>
