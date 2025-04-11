@@ -1,57 +1,3 @@
-// "use client";
-
-// import { useEffect, useRef, useState } from "react";
-// import { usePathname, useRouter } from "next/navigation";
-
-// export function useWarnIfUnsavedChanges(
-//   shouldBlock: boolean,
-//   onConfirm?: () => void
-// ) {
-//   const pathname = usePathname();
-//   const router = useRouter();
-//   const [lastPathname, setLastPathname] = useState(pathname);
-//   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
-//   const blockRef = useRef(shouldBlock);
-
-//   useEffect(() => {
-//     blockRef.current = shouldBlock;
-//   }, [shouldBlock]);
-
-//   useEffect(() => {
-//     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-//       if (blockRef.current) {
-//         event.preventDefault();
-//         event.returnValue = ""; // This is required for Chrome to show the confirmation dialog
-//       }
-//     };
-
-//     window.addEventListener("beforeunload", handleBeforeUnload);
-
-//     return () => {
-//       window.removeEventListener("beforeunload", handleBeforeUnload);
-//     };
-//   }, []);
-
-//   useEffect(() => {
-//     if (pathname !== lastPathname) {
-//       if (blockRef.current && !confirmedNavigation) {
-//         const confirmLeave = window.confirm(
-//           "You have unsaved changes. Are you sure you want to leave this page?"
-//         );
-//         if (!confirmLeave) {
-//           // Prevent route update
-//           router.push(lastPathname); // Force back to the previous route
-//         } else {
-//           setConfirmedNavigation(true);
-//           setLastPathname(pathname);
-//           if (onConfirm) onConfirm();
-//         }
-//       } else {
-//         setLastPathname(pathname);
-//       }
-//     }
-//   }, [pathname]);
-// }
 "use client";
 
 import { useEffect } from "react";
@@ -67,6 +13,10 @@ export const useWarnIfUnsavedChanges = (hasUnsavedChanges: boolean) => {
   const router = useRouter();
 
   useEffect(() => {
+    /**
+     * Handles the window close event by warning the user if there are unsaved changes.
+     * @param {BeforeUnloadEvent} event - The event fired when the window is being closed.
+     */
     const handleWindowClose = (event: BeforeUnloadEvent) => {
       if (!hasUnsavedChanges) return;
       event.preventDefault();
@@ -79,7 +29,7 @@ export const useWarnIfUnsavedChanges = (hasUnsavedChanges: boolean) => {
         !confirm("You have unsaved changes. Are you sure you want to leave?")
       ) {
         // Cancel route change
-        router.push(window.location.pathname); // Stay on current page
+        router.push(window.location.pathname);
         throw "Route change aborted."; // Prevent route change
       }
     };
