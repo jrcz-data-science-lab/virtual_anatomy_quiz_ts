@@ -2,6 +2,7 @@
 
 import { JSX, useState } from "react";
 import EditQuestionBox from "./EditQuestionBox";
+import { toast } from "sonner";
 
 interface Answer {
   text: string;
@@ -146,7 +147,7 @@ export default function EditQuizForm({
         throw new Error("Failed to update quiz");
       }
 
-      alert("Quiz updated successfully");
+      toast("Quiz updated successfully");
     } catch (err) {
       setError("Error updating quiz");
     } finally {

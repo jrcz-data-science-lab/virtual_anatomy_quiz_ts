@@ -9,6 +9,7 @@ import { MenuItem } from "@mui/material";
 import { Separator } from "@/components/ui/separator";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { DateTimePicker24h } from "../components/DateTimePicker";
+import { toast } from "sonner";
 
 /**
  * A form component for creating a quiz.
@@ -76,7 +77,7 @@ export default function CreateQuiz(): JSX.Element {
     );
 
     if (validQuestions.length !== quiz.questions.length) {
-      alert("Please fill out all questions before submitting the quiz.");
+      toast("Please fill out all questions before submitting the quiz.");
       return;
     }
 
@@ -92,7 +93,7 @@ export default function CreateQuiz(): JSX.Element {
       body: JSON.stringify(sanitizedQuiz),
     });
     if (response.ok) {
-      alert("Quiz created successfully!");
+      toast("Quiz created successfully!");
       // Reset the form after successful submission
       setQuiz({
         title: "",
@@ -101,7 +102,7 @@ export default function CreateQuiz(): JSX.Element {
         scheduledAt: undefined,
       });
     } else {
-      alert("Failed to create quiz.");
+      toast("Failed to create quiz.");
     }
   };
 
