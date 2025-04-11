@@ -1,15 +1,14 @@
 "use client";
 
 import { JSX, useState } from "react";
-// import RootLayout from "../layout";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import { MenuItem } from "@mui/material";
-// import Divider from "@mui/material/Divider";
 import { Separator } from "@/components/ui/separator";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { DateTimePicker24h } from "../components/DateTimePicker";
 import { toast } from "sonner";
+import { useWarnIfUnsavedChanges } from "@/app/lib/warnIfUnsavedChanges";
 
 /**
  * A form component for creating a quiz.
@@ -26,6 +25,8 @@ import { toast } from "sonner";
  * created successfully or not.
  */
 export default function CreateQuiz(): JSX.Element {
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+
   const [quiz, setQuiz] = useState<{
     title: string;
     description: string;
@@ -42,6 +43,8 @@ export default function CreateQuiz(): JSX.Element {
   }>({ title: "", description: "", questions: [], scheduledAt: undefined });
 
   const [questionType, setQuestionType] = useState<string>("");
+
+  useWarnIfUnsavedChanges(hasUnsavedChanges);
 
   const handleQuestionTypeChange = (event: SelectChangeEvent) => {
     setQuestionType(event.target.value);
@@ -117,13 +120,19 @@ export default function CreateQuiz(): JSX.Element {
             type="text"
             placeholder="Title"
             value={quiz.title}
-            onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
+            onChange={(e) => {
+              setHasUnsavedChanges(true);
+              setQuiz({ ...quiz, title: e.target.value });
+            }}
             className="w-full p-2 border border-gray-300 rounded"
           />
           <textarea
             placeholder="Description"
             value={quiz.description}
-            onChange={(e) => setQuiz({ ...quiz, description: e.target.value })}
+            onChange={(e) => {
+              setHasUnsavedChanges(true);
+              setQuiz({ ...quiz, description: e.target.value });
+            }}
             className="w-full p-2 border border-gray-300 rounded"
             rows={4}
           />
@@ -142,13 +151,14 @@ export default function CreateQuiz(): JSX.Element {
                 type="text"
                 placeholder="Question"
                 value={question.question}
-                onChange={(e) =>
+                onChange={(e) => {
+                  setHasUnsavedChanges(true);
                   setQuiz((prev) => {
                     const newQuestions = [...prev.questions];
                     newQuestions[index].question = e.target.value;
                     return { ...prev, questions: newQuestions };
-                  })
-                }
+                  });
+                }}
               />
               <FormControl fullWidth className="mt-2">
                 <InputLabel id={`question-type-label-${index}`}>
@@ -159,6 +169,7 @@ export default function CreateQuiz(): JSX.Element {
                   id={`question-type-${index}`}
                   value={questionType || question.type}
                   onChange={(event) => {
+                    setHasUnsavedChanges(true);
                     const newQuestions = [...quiz.questions];
                     newQuestions[index].type = event.target.value;
                     setQuiz((prev) => ({ ...prev, questions: newQuestions }));
@@ -181,6 +192,7 @@ export default function CreateQuiz(): JSX.Element {
                         placeholder={`Answer ${aIdx + 1}`}
                         value={answer.text}
                         onChange={(e) => {
+                          setHasUnsavedChanges(true);
                           const newQuestions = [...quiz.questions];
                           newQuestions[index].answers![aIdx].text =
                             e.target.value;
@@ -197,6 +209,7 @@ export default function CreateQuiz(): JSX.Element {
                           type="checkbox"
                           checked={answer.isCorrect}
                           onChange={(e) => {
+                            setHasUnsavedChanges(true);
                             const newQuestions = [...quiz.questions];
                             newQuestions[index].answers![aIdx].isCorrect =
                               e.target.checked;
