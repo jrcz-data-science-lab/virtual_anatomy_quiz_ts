@@ -30,29 +30,27 @@ export const useWarnIfUnsavedChanges = (hasUnsavedChanges: boolean) => {
       ) {
         // Cancel route change
         router.push(window.location.pathname);
-        throw "Route change aborted."; // Prevent route change
+        return;
       }
     };
 
-    window.addEventListener("beforeunload", handleWindowClose);
-    window.addEventListener("popstate", handleWindowClose); // catch browser back/forward
-
-    const originalPush = router.push;
-    router.push = async (...args) => {
+    const handlePopState = (event: PopStateEvent) => {
       if (
         hasUnsavedChanges &&
         !confirm("You have unsaved changes. Are you sure you want to leave?")
       ) {
-        return;
+        history.pushState(null, "", window.location.pathname); // Prevent navigation
+        event.preventDefault();
       }
-      // @ts-ignore
-      return originalPush.apply(router, args);
     };
+
+    window.addEventListener("beforeunload", handleWindowClose);
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
       window.removeEventListener("beforeunload", handleWindowClose);
-      window.removeEventListener("popstate", handleWindowClose);
-      router.push = originalPush;
+      window.removeEventListener("popstate", handlePopState);
+      // router.push = originalPush;
     };
-  }, [hasUnsavedChanges, router]);
+  }, [hasUnsavedChanges]);
 };
