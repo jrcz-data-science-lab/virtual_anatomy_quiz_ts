@@ -59,7 +59,7 @@ export interface IOrgan extends Document {
 const OrganSchema = new Schema<IOrgan>({
   displayName: { type: String, required: true },
   meshName: { type: String, required: true },
-  region: { type: String, required: true },
+  region: { type: String, required: false },
 });
 
 export const Organ =
