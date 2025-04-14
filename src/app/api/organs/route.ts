@@ -1,14 +1,27 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
 import { Organ } from "@/app/models/Quiz";
+import formatMeshNameToDisplayName from "@/app/lib/formatMeshNameToDisplayName";
 
+/**
+ * Handles POST requests to create a new organ in the database.
+ *
+ * @param {Request} req - The request object containing the organ data in the body.
+ * @returns {Promise<NextResponse>} A promise that resolves with a JSON response
+ * containing the created organ document and a status code of 201 on success,
+ * or an error message with a status code of 500 on failure.
+ */
 export async function POST(req: Request): Promise<NextResponse> {
   console.log("POST REQ received");
   await dbConnect();
   try {
     const body = await req.json();
     console.log("Request body: ", body);
-    const organ = await Organ.create(body);
+
+    const { meshName } = body;
+    const displayName = formatMeshNameToDisplayName(meshName);
+
+    const organ = await Organ.create({ meshName, displayName });
     return NextResponse.json(organ, { status: 201 });
   } catch (error) {
     return NextResponse.json(
