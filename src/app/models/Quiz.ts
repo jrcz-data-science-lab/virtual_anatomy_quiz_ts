@@ -12,6 +12,7 @@ interface IQuestion {
   expectedOrganId?: string; // for select-organ type
 }
 
+// Quiz document
 export interface IQuiz extends Document {
   title: string;
   description: string;
@@ -45,5 +46,79 @@ const QuizSchema = new Schema<IQuiz>(
   { timestamps: true }
 );
 
-export default mongoose.models.Quiz ||
-  mongoose.model<IQuiz>("Quiz", QuizSchema);
+export const Quiz =
+  mongoose.models.Quiz || mongoose.model<IQuiz>("Quiz", QuizSchema);
+
+// Organ document
+export interface IOrgan extends Document {
+  displayName: string;
+  meshName: string;
+  region: string;
+}
+
+const OrganSchema = new Schema<IOrgan>({
+  displayName: { type: String, required: true },
+  meshName: { type: String, required: true },
+  region: { type: String, required: false },
+});
+
+export const Organ =
+  mongoose.models.Organ || mongoose.model<IOrgan>("Organ", OrganSchema);
+
+// Student document
+export interface IStudent extends Document {
+  name: string;
+  email: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+const StudentSchema = new Schema<IStudent>(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+  },
+  { timestamps: true }
+);
+
+export const Student =
+  mongoose.models.Student || mongoose.model<IStudent>("Student", StudentSchema);
+
+// Submission document
+interface ISubmissionAnswer {
+  questionId: string;
+  selectedAnswerIndex?: number;
+  textResponse?: string;
+}
+
+export interface ISubmission extends Document {
+  studentId: string;
+  quizId: string;
+  submittedAt: Date;
+  answers: ISubmissionAnswer[];
+  // score: number;
+}
+
+const SubmissionAnswerSchema = new Schema<ISubmissionAnswer>(
+  {
+    questionId: { type: String, required: true },
+    selectedAnswerIndex: { type: Number, required: false },
+    textResponse: { type: String, required: false },
+  },
+  { _id: false }
+);
+
+const SubmissionSchema = new Schema<ISubmission>(
+  {
+    studentId: { type: String, required: true },
+    quizId: { type: String, required: true },
+    submittedAt: { type: Date, required: true },
+    answers: { type: [SubmissionAnswerSchema], required: true },
+    // score: { type: Number, required: true },
+  },
+  { timestamps: true }
+);
+
+export const Submission =
+  mongoose.models.Submission ||
+  mongoose.model<ISubmission>("Submission", SubmissionSchema);
