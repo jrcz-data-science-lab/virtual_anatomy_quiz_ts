@@ -1,7 +1,7 @@
 import { getQuizzes } from "@/app/lib/getQuizzes";
 import EditQuizForm from "@/app/components/EditQuizForm";
 import dbConnect from "@/app/lib/dbConnect";
-import Quiz from "@/app/models/Quiz";
+import { Quiz } from "@/app/models/Quiz";
 import { JSX } from "react";
 
 /**

@@ -1,5 +1,5 @@
 import dbConnect from "./dbConnect";
-import Quiz, { IQuiz } from "@/app/models/Quiz";
+import { Quiz } from "@/app/models/Quiz";
 
 /**
  * Retrieves all quizzes from the database.
