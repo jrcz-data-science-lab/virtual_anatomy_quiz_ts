@@ -9,6 +9,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { DateTimePicker24h } from "../components/DateTimePicker";
 import { toast } from "sonner";
 import { useWarnIfUnsavedChanges } from "@/app/lib/warnIfUnsavedChanges";
+import { OrgansCombobox } from "../components/OrgansCombobox";
 
 /**
  * A form component for creating a quiz.
@@ -237,7 +238,19 @@ export default function CreateQuiz(): JSX.Element {
                     + Add Answer
                   </button>
                 </>
+              ) : question.type === "select-organ" ? (
+                <OrgansCombobox
+                  selectedOrganId={question.expectedOrganId}
+                  onSelectOrgan={(organId) => {
+                    setHasUnsavedChanges(true);
+                    const newQuestions = [...quiz.questions];
+                    newQuestions[index].expectedOrganId = organId;
+                    setQuiz((prev) => ({ ...prev, questions: newQuestions }));
+                  }}
+                />
               ) : null}
+
+              {/* {question.type === "select-organ" ? <OrgansCombobox /> : null} */}
               <Separator className="my-4" />
             </div>
           ))}
