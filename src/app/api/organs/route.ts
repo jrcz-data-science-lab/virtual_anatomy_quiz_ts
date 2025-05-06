@@ -31,6 +31,13 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 }
 
+/**
+ * Handles GET requests to retrieve all organ documents from the database.
+ *
+ * @returns {Promise<NextResponse>} A promise that resolves with a JSON response
+ * containing the list of organ documents and a status code of 200 on success,
+ * or an error message with a status code of 500 on failure.
+ */
 export async function GET(): Promise<NextResponse> {
   await dbConnect();
   try {
