@@ -183,6 +183,9 @@ export default function CreateQuiz(): JSX.Element {
                   <MenuItem value="short-answer">Short Answer</MenuItem>
                 </Select>
               </FormControl>
+              {/* Split up handling of different question types */}
+              {/* Don't allow more than 2 answers for true / false */}
+              {/* Automatically draw 2 answer inputs to the screen for true-false question type */}
               {question.type === "multiple-choice" ||
               question.type === "true-false" ? (
                 <>
