@@ -3,6 +3,7 @@
 import { JSX, useState } from "react";
 import EditQuestionBox from "./EditQuestionBox";
 import { toast } from "sonner";
+import { redirect } from "next/navigation";
 
 interface Answer {
   text: string;
@@ -155,6 +156,19 @@ export default function EditQuizForm({
     }
   };
 
+  const handleDeleteQuiz = async () => {
+    try {
+      await fetch(`/api/quizzes/${id}`, {
+        method: "DELETE",
+      });
+      toast("Quiz deleted successfully");
+    } catch (err) {
+      setError("Error deleting quiz");
+    }
+
+    redirect("/");
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="mb-4">
@@ -227,6 +241,13 @@ export default function EditQuizForm({
         className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2"
       >
         {loading ? "Updating..." : "Update Quiz"}
+      </button>
+      <button
+        type="button"
+        onClick={handleDeleteQuiz}
+        className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
+      >
+        Delete Quiz
       </button>
       {error && <p className="text-red-500">{error}</p>}
     </form>
