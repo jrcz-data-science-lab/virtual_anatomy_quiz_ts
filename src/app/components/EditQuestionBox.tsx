@@ -54,7 +54,7 @@ export default function EditQuestionBox({
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {question.answers.map((answer, answerIndex) => (
+        {question.answers?.map((answer, answerIndex) => (
           <div key={answerIndex} className="flex items-center gap-2">
             <input
               type="radio"
