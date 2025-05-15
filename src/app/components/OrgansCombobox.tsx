@@ -34,13 +34,13 @@ interface OrgansComboboxProps {
  *
  * @returns {JSX.Element} The rendered combobox component with a list of organs.
  */
-
 export function OrgansCombobox({
   selectedOrganId,
   onSelectOrgan,
 }: OrgansComboboxProps): JSX.Element {
   const [open, setOpen] = useState(false);
   const [organs, setOrgans] = useState<OrganClient[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function fetchOrgans() {
@@ -52,6 +52,10 @@ export function OrgansCombobox({
   }, []);
 
   const selected = organs.find((organ) => organ._id === selectedOrganId);
+
+  const filteredOrgans = organs.filter((organ) =>
+    organ.displayName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -67,31 +71,38 @@ export function OrgansCombobox({
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
         <Command>
-          <CommandInput placeholder="Search organs..." />
+          <CommandInput
+            placeholder="Search organs..."
+            value={searchTerm}
+            onValueChange={setSearchTerm}
+          />
           <CommandList>
-            <CommandEmpty>No organs found.</CommandEmpty>
-            <CommandGroup>
-              {organs.map((organ) => (
-                <CommandItem
-                  key={organ._id}
-                  value={organ._id}
-                  onSelect={() => {
-                    onSelectOrgan(organ._id);
-                    setOpen(false);
-                  }}
-                >
-                  {organ.displayName}
-                  <Check
-                    className={cn(
-                      "ml-auto",
-                      selectedOrganId === organ._id
-                        ? "opacity-100"
-                        : "opacity-0"
-                    )}
-                  />
-                </CommandItem>
-              ))}
-            </CommandGroup>
+            {filteredOrgans.length === 0 ? (
+              <CommandEmpty>No organs found.</CommandEmpty>
+            ) : (
+              <CommandGroup>
+                {filteredOrgans.map((organ) => (
+                  <CommandItem
+                    key={organ._id}
+                    value={organ.displayName}
+                    onSelect={() => {
+                      onSelectOrgan(organ._id);
+                      setOpen(false);
+                    }}
+                  >
+                    {organ.displayName}
+                    <Check
+                      className={cn(
+                        "ml-auto",
+                        selectedOrganId === organ._id
+                          ? "opacity-100"
+                          : "opacity-0"
+                      )}
+                    />
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            )}
           </CommandList>
         </Command>
       </PopoverContent>

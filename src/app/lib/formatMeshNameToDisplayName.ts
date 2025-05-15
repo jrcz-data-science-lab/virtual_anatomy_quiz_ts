@@ -13,10 +13,20 @@ function formatMeshNameToDisplayName(meshName: string): string {
     "organs_",
   ];
 
+  const suffixesToRemove = ["_L", "_R", "_001", "_002", "_003", "_004", "_005"];
+
   // Remove known prefixes
   for (const prefix of prefixesToRemove) {
     if (meshName.startsWith(prefix)) {
       meshName = meshName.slice(prefix.length);
+      break;
+    }
+  }
+
+  // Remove known suffixes
+  for (const suffix of suffixesToRemove) {
+    if (meshName.endsWith(suffix)) {
+      meshName = meshName.slice(0, -suffix.length);
       break;
     }
   }
