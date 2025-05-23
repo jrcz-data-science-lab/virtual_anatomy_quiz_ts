@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
 import { Quiz } from "@/app/models/Quiz";
-import { isContext } from "vm";
 
 /**
  * Handles GET requests to retrieve a quiz by id from the database.

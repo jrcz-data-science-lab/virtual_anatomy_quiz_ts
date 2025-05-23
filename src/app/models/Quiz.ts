@@ -85,24 +85,23 @@ export const Student =
   mongoose.models.Student || mongoose.model<IStudent>("Student", StudentSchema);
 
 // Submission document
-interface ISubmissionAnswer {
+export interface ISubmissionAnswer {
   questionId: string;
-  selectedAnswerIndex?: number;
+  selectedAnswerId?: number;
   textResponse?: string;
 }
 
 export interface ISubmission extends Document {
-  studentId: string;
+  studentId?: string;
   quizId: string;
   submittedAt: Date;
   answers: ISubmissionAnswer[];
-  // score: number;
 }
 
 const SubmissionAnswerSchema = new Schema<ISubmissionAnswer>(
   {
     questionId: { type: String, required: true },
-    selectedAnswerIndex: { type: Number, required: false },
+    selectedAnswerId: { type: Number, required: false },
     textResponse: { type: String, required: false },
   },
   { _id: false }
@@ -110,7 +109,7 @@ const SubmissionAnswerSchema = new Schema<ISubmissionAnswer>(
 
 const SubmissionSchema = new Schema<ISubmission>(
   {
-    studentId: { type: String, required: true },
+    studentId: { type: String, required: false },
     quizId: { type: String, required: true },
     submittedAt: { type: Date, required: true },
     answers: { type: [SubmissionAnswerSchema], required: true },
@@ -122,3 +121,7 @@ const SubmissionSchema = new Schema<ISubmission>(
 export const Submission =
   mongoose.models.Submission ||
   mongoose.model<ISubmission>("Submission", SubmissionSchema);
+
+// export const SubmissionAnswer =
+//   mongoose.models.SubmissionAnswer ||
+//   mongoose.model<ISubmissionAnswer>("SubmissionAnswer", SubmissionAnswerSchema);
