@@ -134,31 +134,31 @@ export async function GET(
         question.type === "multiple-choice" ||
         question.type === "true-false"
       ) {
-        const answerCounts: Record<string, number> = {};
-        question.answers?.forEach((opt) => {
-          answerCounts[opt.text.toString()] = 0;
-        });
+        const optionCounts = new Array(question.answers?.length || 0).fill(0);
 
         questionSubmissions.forEach((submittedAnswer) => {
           if (
             submittedAnswer.selectedAnswerId !== undefined &&
-            question.answers
+            question.answers && // Ensure question.answers exists
+            submittedAnswer.selectedAnswerId >= 0 &&
+            submittedAnswer.selectedAnswerId < question.answers.length // Check bounds
           ) {
-            const chosenOption =
-              question.answers[submittedAnswer.selectedAnswerId];
-            if (chosenOption) {
-              const chosenOptionText = chosenOption.text.toString();
-              answerCounts[chosenOptionText] =
-                (answerCounts[chosenOptionText] || 0) + 1;
-              if (chosenOption.isCorrect) totalCorrect++;
+            // Increment count for the CHOSEN OPTION INDEX
+            optionCounts[submittedAnswer.selectedAnswerId]++;
+
+            // Check if the chosen option index corresponds to a correct answer
+            if (question.answers[submittedAnswer.selectedAnswerId]?.isCorrect) {
+              totalCorrect++;
             }
           }
         });
 
-        question.answers?.forEach((opt) => {
+        // Construct answersBreakdown by iterating through the original question options
+        // and using the counts from optionCounts (which are per-index)
+        question.answers?.forEach((opt, index) => {
           currentAnswersBreakdown.push({
-            answerText: opt.text.toString(),
-            studentCount: answerCounts[opt.text.toString()] || 0,
+            answerText: opt.text.toString(), // The display text of the option
+            studentCount: optionCounts[index], // The count for this specific option (by its index)
             isCorrectOption: Boolean(opt.isCorrect),
           });
         });
