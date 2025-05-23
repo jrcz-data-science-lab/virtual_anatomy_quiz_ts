@@ -5,7 +5,8 @@ interface IAnswer {
   isCorrect: Boolean;
 }
 
-interface IQuestion {
+export interface IQuestion {
+  _id?: string;
   question: string;
   type: "multiple-choice" | "true-false" | "select-organ" | "short-answer";
   answers?: IAnswer[];
@@ -29,6 +30,7 @@ const AnswerSchema = new Schema<IAnswer>({
 });
 
 const QuestionSchema = new Schema<IQuestion>({
+  _id: { type: String, required: false },
   question: { type: String, required: true },
   type: { type: String, required: true },
   answers: { type: [AnswerSchema], required: false },
@@ -51,12 +53,14 @@ export const Quiz =
 
 // Organ document
 export interface IOrgan extends Document {
+  _id: string;
   displayName: string;
   meshName: string;
   region: string;
 }
 
 const OrganSchema = new Schema<IOrgan>({
+  _id: { type: String, required: true },
   displayName: { type: String, required: true },
   meshName: { type: String, required: true },
   region: { type: String, required: false },
