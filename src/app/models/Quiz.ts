@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document, Types } from "mongoose";
 
 interface IAnswer {
   text: String;
@@ -6,7 +6,7 @@ interface IAnswer {
 }
 
 export interface IQuestion {
-  _id?: string;
+  _id: Types.ObjectId;
   question: string;
   type: "multiple-choice" | "true-false" | "select-organ" | "short-answer";
   answers?: IAnswer[];
@@ -29,14 +29,16 @@ const AnswerSchema = new Schema<IAnswer>({
   isCorrect: { type: Boolean, required: true },
 });
 
-const QuestionSchema = new Schema<IQuestion>({
-  _id: { type: String, required: false },
-  question: { type: String, required: true },
-  type: { type: String, required: true },
-  answers: { type: [AnswerSchema], required: false },
-  // correctAnswer: { type: String, required: false },
-  expectedOrganId: { type: String, required: false }, // for select-organ type
-});
+const QuestionSchema = new Schema<IQuestion>(
+  {
+    question: { type: String, required: true },
+    type: { type: String, required: true },
+    answers: { type: [AnswerSchema], required: false },
+    // correctAnswer: { type: String, required: false },
+    expectedOrganId: { type: String, required: false }, // for select-organ type
+  },
+  { _id: true }
+);
 
 const QuizSchema = new Schema<IQuiz>(
   {
