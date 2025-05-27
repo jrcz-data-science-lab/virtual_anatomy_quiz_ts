@@ -71,7 +71,7 @@ const QuestionChart: React.FC<QuestionChartProps> = ({
           top: 5,
           right: 30,
           left: 20,
-          bottom: 50, // Increased bottom margin for angled labels if needed
+          bottom: 50,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />

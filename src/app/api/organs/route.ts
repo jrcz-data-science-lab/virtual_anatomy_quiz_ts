@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
-import { Organ } from "@/app/models/Quiz";
+import { OrganGroup } from "@/app/models/Quiz";
 import formatMeshNameToDisplayName from "@/app/lib/formatMeshNameToDisplayName";
 
 /**
@@ -21,7 +21,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     const { meshName } = body;
     const displayName = formatMeshNameToDisplayName(meshName);
 
-    const organ = await Organ.create({ meshName, displayName });
+    const organ = await OrganGroup.create({ meshName, displayName });
     return NextResponse.json(organ, { status: 201 });
   } catch (error) {
     return NextResponse.json(
@@ -41,7 +41,7 @@ export async function POST(req: Request): Promise<NextResponse> {
 export async function GET(): Promise<NextResponse> {
   await dbConnect();
   try {
-    const organs = await Organ.find({});
+    const organs = await OrganGroup.find({});
     return NextResponse.json(organs, { status: 200 });
   } catch (error) {
     return NextResponse.json(
