@@ -581,7 +581,10 @@ export default function CreateQuizPage(): JSX.Element {
                             Target Configuration (Select Organ)
                           </Label>
                           <div>
-                            <Label htmlFor={`q-targetType-${qIndex}`}>
+                            <Label
+                              htmlFor={`q-targetType-${qIndex}`}
+                              className="mb-2"
+                            >
                               Target Type
                             </Label>
                             <Select
