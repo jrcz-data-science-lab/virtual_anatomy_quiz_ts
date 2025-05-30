@@ -112,7 +112,6 @@ const QuestionChart: React.FC<QuestionChartProps> = ({
             return [tooltipLabel, "Students"];
           }}
         />
-        <Legend />
         <Bar dataKey="studentCount" name="Students">
           {data.map((entry, index) => (
             <Cell
