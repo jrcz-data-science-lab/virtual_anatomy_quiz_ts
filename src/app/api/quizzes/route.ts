@@ -15,6 +15,21 @@ const answerSchema = z.object({
   isCorrect: z.boolean({ required_error: "isCorrect flag is required" }),
 });
 
+const selectOrganAnswerSchema = z.object({
+  text: z
+    .string({ required_error: "Answer text is required" })
+    .trim()
+    .min(1, { message: "Answer text must be at least 1 character long" }),
+  isCorrect: z.boolean({ required_error: "isCorrect flag is required" }),
+  target_id: z
+    .string({
+      required_error: "target_id is required for select-organ questions.",
+    })
+    .refine((val) => Types.ObjectId.isValid(val), {
+      message: "Invalid target_id format. Must be a valid ObjectId string.",
+    }),
+});
+
 // Base Question Schema (common fields for request body from client)
 const baseRequestBodyQuestionSchema = z.object({
   questionText: z
@@ -55,7 +70,7 @@ const selectOrganQuestionRequestBodySchema =
       .refine((val) => Types.ObjectId.isValid(val), {
         message: "Invalid target_id format. Must be a valid ObjectId string.",
       }),
-    answers: z.array(answerSchema).min(1, { message: "An answer is required" }),
+    answers: z.array(selectOrganAnswerSchema),
   });
 
 const shortAnswerQuestionRequestBodySchema =
@@ -79,10 +94,7 @@ const quizRequestBodySchema = z.object({
     .string({ required_error: "Title is required" })
     .trim()
     .min(1, { message: "Title must be at least 1 character long" }),
-  description: z
-    .string({ required_error: "Description is required" })
-    .trim()
-    .min(1, { message: "Description must be at least 1 character long" }),
+  description: z.string().trim().optional(),
   studyYear: z
     .number({ required_error: "Study year is required" })
     .int({ message: "Study year must be an integer" })
