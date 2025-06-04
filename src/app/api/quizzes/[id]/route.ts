@@ -111,7 +111,7 @@ export async function PUT(
     }
 
     // Validate each question if questions are part of the update payload
-    if (body.questions && Array.isArray(body.questions)) {
+    if (Array.isArray(body?.questions)) {
       for (const q of body.questions) {
         if (!q.questionText?.trim() || !q.type) {
           return NextResponse.json(

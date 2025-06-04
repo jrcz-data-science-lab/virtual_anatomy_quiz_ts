@@ -2,6 +2,100 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
 import { Quiz } from "@/app/models/Quiz";
 import mongoose, { Types } from "mongoose";
+import { z } from "zod";
+
+// --- Zod Schemas ---
+
+// Schema for an answer (within a Question for MCQ/TF)
+const answerSchema = z.object({
+  text: z
+    .string({ required_error: "Answer text is required" })
+    .trim()
+    .min(1, { message: "Answer text must be at least 1 character long" }),
+  isCorrect: z.boolean({ required_error: "isCorrect flag is required" }),
+});
+
+// Base Question Schema (common fields for request body from client)
+const baseRequestBodyQuestionSchema = z.object({
+  questionText: z
+    .string({ required_error: "Question text is required" })
+    .trim()
+    .min(1, { message: "Question text must be at least 1 character long" }),
+});
+
+// Specific Question Type Schemas for request body
+
+const multipleChoiceQuestionRequestBodySchema =
+  baseRequestBodyQuestionSchema.extend({
+    type: z.literal("multiple-choice"),
+    answers: z
+      .array(answerSchema)
+      .min(1, { message: "At least one answer is required" }),
+  });
+
+const trueFalseQuestionRequestBodySchema = baseRequestBodyQuestionSchema.extend(
+  {
+    type: z.literal("true-false"),
+    answers: z
+      .array(answerSchema)
+      .min(1, { message: "At least one answer is required" }),
+  }
+);
+
+const selectOrganQuestionRequestBodySchema =
+  baseRequestBodyQuestionSchema.extend({
+    type: z.literal("select-organ"),
+    targetType: z.enum(["mesh", "group"], {
+      required_error: "Target Type ('mesh' or 'group') is required",
+    }),
+    target_id: z
+      .string({
+        required_error: "target_id is required for select-organ questions.",
+      })
+      .refine((val) => Types.ObjectId.isValid(val), {
+        message: "Invalid target_id format. Must be a valid ObjectId string.",
+      }),
+    answers: z.array(answerSchema).min(1, { message: "An answer is required" }),
+  });
+
+const shortAnswerQuestionRequestBodySchema =
+  baseRequestBodyQuestionSchema.extend({
+    type: z.literal("short-answer"),
+    answers: z
+      .array(answerSchema)
+      .max(0, "Short answer questions should not have predefined answers."),
+  });
+
+const requestQuestionSchema = z.discriminatedUnion("type", [
+  multipleChoiceQuestionRequestBodySchema,
+  trueFalseQuestionRequestBodySchema,
+  selectOrganQuestionRequestBodySchema,
+  shortAnswerQuestionRequestBodySchema,
+]);
+
+// Main Quiz Schema for request body
+const quizRequestBodySchema = z.object({
+  title: z
+    .string({ required_error: "Title is required" })
+    .trim()
+    .min(1, { message: "Title must be at least 1 character long" }),
+  description: z
+    .string({ required_error: "Description is required" })
+    .trim()
+    .min(1, { message: "Description must be at least 1 character long" }),
+  studyYear: z
+    .number({ required_error: "Study year is required" })
+    .int({ message: "Study year must be an integer" })
+    .min(1, { message: "Study year must be a positive number" }),
+  questions: z
+    .array(requestQuestionSchema)
+    .min(1, { message: "At least one question is required" }),
+  scheduledAt: z
+    .string()
+    .datetime({ message: "Scheduled date must be in ISO 8601 format" })
+    .optional()
+    .nullable(),
+});
 
 /**
  * Handles GET requests to retrieve all quizzes from the database.
@@ -56,110 +150,66 @@ export async function GET(req: Request): Promise<NextResponse> {
  *
  * The function expects a JSON body with the following structure:
  * - title: string (required) - The title of the quiz.
- * - description: string (optional) - A brief description of the quiz.
- * - studyYear: number (required) - The academic year for which the quiz is intended.
- * - questions: Array (required) - A list of questions, each containing:
+ * - description: string (optional) - A description of the quiz.
+ * - studyYear: number (required) - The study year of the quiz.
+ * - questions: Array (required) - An array of question objects, each containing:
  *   - questionText: string (required) - The text of the question.
- *   - type: string (required) - The type of the question (e.g., multiple-choice, true-false, select-organ, short-answer).
- *   - answers: Array (optional) - A list of answer objects, each with:
- *     - text: string (required for each answer) - The answer text.
- *     - isCorrect: boolean (required for each answer) - Whether the answer is correct.
- *   - targetType: string (required for select-organ) - The target type ('mesh' or 'group') for select-organ questions.
- *   - target_id: ObjectId (required for select-organ) - The target identifier for select-organ questions.
- * - scheduledAt: string (optional) - An ISO date string indicating when the quiz is scheduled.
+ *   - type: string (required) - The type of the question, either multiple-choice or select-organ.
+ *   - answers: Array (optional) - An array of answer objects, each containing:
+ *     - answerText: string (required) - The text of the answer.
+ *     - isCorrect: boolean (optional) - Whether the answer is correct or not.
+ *     - target_id: ObjectId (optional) - The ID of the selected organ, for select-organ questions only.
+ *   - targetType: string (optional) - The type of the target, for select-organ questions only.
+ * - scheduledAt: string (optional) - The ISO date string of when the quiz should be scheduled.
  *
  * The function validates the input data, ensuring required fields are present and have correct types.
- * It creates a new quiz document in the database if validation succeeds, returning a JSON response
- * with the created quiz and a 201 status code. If validation fails or an error occurs, it returns
- * a JSON response with an appropriate error message and status code.
+ * If validation fails, it returns a 400 status with an error message. On success, it returns the created quiz data with a 201 status.
+ * Logs and returns a 500 status with an error message if an exception occurs.
  *
  * @param {Request} req - The incoming HTTP request.
- * @returns {Promise<NextResponse>} A promise that resolves to the HTTP response.
+ * @returns {Promise<NextResponse>} The response containing the created quiz data or an error message.
  */
 export async function POST(req: Request): Promise<NextResponse> {
   try {
     await dbConnect();
     const body = await req.json();
 
-    // Validate required quiz-level fields
-    if (
-      !body.title ||
-      !body.studyYear ||
-      !body.questions ||
-      !Array.isArray(body.questions)
-    ) {
+    const validationResult = quizRequestBodySchema.safeParse(body);
+
+    if (!validationResult.success) {
       return NextResponse.json(
         {
-          error:
-            "Missing required fields: title, studyYear, or questions array.",
+          error: validationResult.error.message,
+          details: validationResult.error.flatten().fieldErrors,
         },
         { status: 400 }
       );
     }
-    if (typeof body.studyYear !== "number") {
-      return NextResponse.json(
-        { error: "studyYear must be a number." },
-        { status: 400 }
-      );
-    }
 
-    // Validate each question
-    for (const q of body.questions) {
-      if (!q.questionText?.trim() || !q.type) {
-        return NextResponse.json(
-          { error: "Each question must have questionText and type." },
-          { status: 400 }
-        );
-      }
-      if (q.type === "select-organ") {
-        if (!q.targetType || !q.target_id) {
-          return NextResponse.json(
-            {
-              error:
-                "Select-organ questions must have targetType and target_id.",
-            },
-            { status: 400 }
-          );
-        }
-        if (!["mesh", "group"].includes(q.targetType)) {
-          return NextResponse.json(
-            {
-              error:
-                "Invalid targetType for select-organ question. Must be 'mesh' or 'group'.",
-            },
-            { status: 400 }
-          );
-        }
-        if (!Types.ObjectId.isValid(q.target_id)) {
-          return NextResponse.json(
-            {
-              error: `Invalid target_id ObjectId format for question: ${q.questionText}`,
-            },
-            { status: 400 }
-          );
-        }
-      }
-    }
+    const validatedData = validationResult.data;
 
     const quizData = {
-      title: body.title,
-      description: body.description,
-      studyYear: body.studyYear,
-      questions: body.questions.map((q: any) => ({
-        questionText: q.questionText,
-        type: q.type,
-        answers:
-          q.answers?.map((ans: any) => ({
-            text: ans.text,
-            isCorrect: ans.isCorrect,
-          })) || [],
-        targetType: q.type === "select-organ" ? q.targetType : undefined,
-        target_id:
-          q.type === "select-organ" && q.target_id
-            ? new Types.ObjectId(q.target_id)
-            : undefined,
-      })),
-      scheduledAt: body.scheduledAt ? new Date(body.scheduledAt) : undefined,
+      title: validatedData.title,
+      description: validatedData.description,
+      studyYear: validatedData.studyYear,
+      questions: validatedData.questions.map((q) => {
+        // Map to ensure only expected fields go into the DB model,
+        // and convert target_id to ObjectId for select-organ.
+        // Mongoose will generate _id for questions and answers.
+        let questionPayload: any = {
+          questionText: q.questionText,
+          type: q.type,
+          answers: q.answers || [], // Ensure answers is an array
+        };
+        if (q.type === "select-organ") {
+          questionPayload.targetType = q.targetType;
+          questionPayload.target_id = new Types.ObjectId(q.target_id); // Already validated as valid ObjectId string by Zod
+        }
+        return questionPayload;
+      }),
+      scheduledAt: validatedData.scheduledAt
+        ? new Date(validatedData.scheduledAt)
+        : null,
     };
 
     const newQuiz = new Quiz(quizData);

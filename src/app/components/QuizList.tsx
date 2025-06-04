@@ -8,7 +8,6 @@ type Quiz = {
   _id: string;
   title: string;
   description: string;
-  status: string;
   questions: { question: string; type: string }[];
   scheduledAt: Date | string | null;
 };
@@ -57,7 +56,6 @@ export default function QuizList({
                 </CardHeader>
                 <CardContent>
                   <p className="pb-2">{quiz.description}</p>
-                  <p>Status: {quiz.status}</p>
                   <p>Questions: {quiz.questions.length}</p>
                   <p>
                     Scheduled For:{" "}

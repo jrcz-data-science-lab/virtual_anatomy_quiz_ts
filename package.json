@@ -39,7 +39,8 @@
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.0.2",
     "tw-animate-css": "^1.2.4",
-    "virtual_anatomy_quiz_ts": "file:"
+    "virtual_anatomy_quiz_ts": "file:",
+    "zod": "^3.25.51"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.14",

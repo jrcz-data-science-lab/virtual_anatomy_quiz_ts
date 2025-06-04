@@ -15,7 +15,6 @@ export default async function Home() {
     _id: String(quiz._id),
     title: quiz.title || "Untitled Quiz",
     description: quiz.description || "No description available",
-    status: quiz.status || "Unknown",
     scheduledAt: quiz.scheduledAt || null,
     questions: quiz.questions.map((q: any) => ({
       ...q,
