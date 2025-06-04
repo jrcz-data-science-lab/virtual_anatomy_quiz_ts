@@ -45,6 +45,7 @@ export default async function EditQuiz(props: {
       <EditQuizForm
         id={params.id}
         initialTitle={plainQuiz.title}
+        initialStudyYear={plainQuiz.studyYear}
         initialDescription={plainQuiz.description}
         initialQuestions={plainQuiz.questions}
         initialScheduledAt={plainQuiz.scheduledAt}

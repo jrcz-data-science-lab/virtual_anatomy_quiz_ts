@@ -1,13 +1,23 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
-import { Quiz, Submission, Organ } from "@/app/models/Quiz";
-import type { IQuiz, IQuestion, ISubmissionAnswer } from "@/app/models/Quiz";
-import Mongoose, { Types } from "mongoose";
+import {
+  Quiz,
+  Submission,
+  OrganGroup,
+  MeshCatalogItem,
+} from "@/app/models/Quiz";
+import type {
+  IQuiz,
+  IQuestion,
+  ISubmissionAnswer,
+  IMeshCatalogItem,
+} from "@/app/models/Quiz";
+import mongoose, { Types } from "mongoose";
 
 interface AnswerBreakdown {
-  answerText: string;
+  answerText: string; // For MCQ/TF: option text. For Select-Organ: mesh/group display name.
   studentCount: number;
-  isCorrectOption?: boolean; // True if this specific option is the correct one
+  isCorrectOption?: boolean;
 }
 
 interface QuestionResult {
@@ -15,42 +25,49 @@ interface QuestionResult {
   questionText: string;
   questionType: IQuestion["type"];
   totalSubmissionsForQuestion: number;
-  totalCorrect: number; // Will be 0 if questionType is "short-answer"
-  answersBreakdown: AnswerBreakdown[]; // Used for chartable types (MCQ, T/F, Select Organ)
-  submittedTextAnswers?: string[]; // Specifically used for short-answer responses
-  // For select-organ, we want to store the correct organ's display name
-  correctOrganDisplayName?: string;
+  totalCorrect: number;
+  answersBreakdown: AnswerBreakdown[];
+  submittedTextAnswers?: string[]; // For short-answer responses
+  correctTargetDisplayName?: string; // For select-organ: display name of the correct mesh or group
 }
 
-// Define a type for lean Organ objects
 type LeanOrgan = {
-  _id: Types.ObjectId; // Correctly typed ObjectId
+  _id: Types.ObjectId;
   displayName: string;
-  meshName: string; // Assuming from IOrgan
-  region?: string; // Assuming from IOrgan, optional
+  meshName: string;
+  region?: string;
 };
+type LeanMeshCatalogItem = Omit<IMeshCatalogItem, keyof Document> & {
+  _id: Types.ObjectId;
+};
+type LeanOrganGroup = { _id: Types.ObjectId; groupName: string };
 
 /**
- * Handles GET requests to retrieve question-level results for a given quiz.
+ * Handles GET requests to retrieve results for a quiz.
+ *
+ * Connects to the database and fetches the quiz document and its submissions.
+ * For each question, it determines the breakdown of answers and correctness
+ * based on the submissions. For `select-organ` questions, it fetches the
+ * details of the clicked mesh and the target mesh/group. Returns the results
+ * in the form of a `QuestionResult` array.
  *
  * @param {Request} req - The incoming HTTP request.
- * @param {{ params: Promise<{ id: string }> }} props - The props object containing the quiz id.
- * @returns {Promise<NextResponse>} A promise that resolves with a JSON response containing
- * an array of question results, each containing the question text, type, total submissions,
- * total correct, and an array of answer breakdowns (for chartable types), or a status code
- * of 400 if the quiz ID is missing, 404 if the quiz is not found, or 500 on failure.
+ * @param {RequestContext} context - Contains the parameters including the quiz ID.
+ * @returns {Promise<NextResponse>} The response containing the quiz results or an error message.
+ * @example
+ * GET /api/quizzes/123/results
  */
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ): Promise<NextResponse> {
   try {
     await dbConnect();
-    const quizId = params.id; // Use the actual param name
+    const quizId = context.params.id;
 
-    if (!quizId) {
+    if (!quizId || !Types.ObjectId.isValid(quizId)) {
       return NextResponse.json(
-        { error: "Quiz ID is required" },
+        { error: "Invalid Quiz ID format" },
         { status: 400 }
       );
     }
@@ -60,74 +77,96 @@ export async function GET(
       return NextResponse.json({ error: "Quiz not found" }, { status: 404 });
     }
 
-    const submissions = await Submission.find({ quizId: quiz._id }).lean<
+    const submissions = await Submission.find({
+      quiz_id: new Types.ObjectId(quizId),
+    }).lean<
       {
-        studentId?: string;
-        quizId: string;
+        _id: Types.ObjectId;
+        quiz_id: Types.ObjectId;
+        student_id?: string;
+        studyYearAtSubmission: number;
         submittedAt: Date;
         answers: ISubmissionAnswer[];
-        _id: Types.ObjectId;
       }[]
     >();
+
     const questionResults: QuestionResult[] = [];
 
-    const organIdsToFetch = new Set<string>();
+    // Pre-fetch mesh and group details for "select-organ" questions and answers
+    const itemIdsToFetch = new Set<string>(); // For MeshCatalogItem._id
+    const groupIdsToFetch = new Set<string>(); // For OrganGroup._id
+
     quiz.questions.forEach((q: IQuestion) => {
-      if (q.type === "select-organ" && q.expectedOrganId) {
-        if (Types.ObjectId.isValid(q.expectedOrganId))
-          organIdsToFetch.add(q.expectedOrganId);
+      if (q.type === "select-organ" && q.target_id) {
+        if (
+          q.targetType === "mesh" &&
+          Types.ObjectId.isValid(q.target_id.toString())
+        )
+          itemIdsToFetch.add(q.target_id.toString());
+        if (
+          q.targetType === "group" &&
+          Types.ObjectId.isValid(q.target_id.toString())
+        )
+          groupIdsToFetch.add(q.target_id.toString());
       }
     });
     submissions.forEach((sub) => {
-      sub.answers.forEach((ans: ISubmissionAnswer) => {
-        const question = quiz.questions.find(
-          (q: IQuestion) => q._id?.toString() === ans.questionId
-        );
-        if (question?.type === "select-organ" && ans.textResponse) {
-          if (Types.ObjectId.isValid(ans.textResponse))
-            organIdsToFetch.add(ans.textResponse);
+      sub.answers.forEach((ans) => {
+        if (
+          ans.responseText_ClickedMesh_id &&
+          Types.ObjectId.isValid(ans.responseText_ClickedMesh_id.toString())
+        ) {
+          itemIdsToFetch.add(ans.responseText_ClickedMesh_id.toString());
         }
       });
     });
 
-    const validOrganObjectIds = Array.from(organIdsToFetch).map(
-      (id) => new Types.ObjectId(id)
+    const meshCatalogDetailsArray = await MeshCatalogItem.find({
+      _id: {
+        $in: Array.from(itemIdsToFetch).map((id) => new Types.ObjectId(id)),
+      },
+    }).lean<LeanMeshCatalogItem[]>();
+    const organGroupDetailsArray = await OrganGroup.find({
+      _id: {
+        $in: Array.from(groupIdsToFetch).map((id) => new Types.ObjectId(id)),
+      },
+    }).lean<LeanOrganGroup[]>();
+
+    const meshCatalogMap = new Map(
+      meshCatalogDetailsArray.map((item) => [item._id.toString(), item])
     );
-    const organDetails = await Organ.find({
-      _id: { $in: validOrganObjectIds },
-    }).lean<LeanOrgan[]>();
-    const organMap = new Map(
-      organDetails.map((org) => [org._id.toString(), org.displayName])
+    const organGroupMap = new Map(
+      organGroupDetailsArray.map((group) => [group._id.toString(), group])
     );
 
     for (const question of quiz.questions) {
       const currentQuestionIdString = question._id?.toString();
-      if (!currentQuestionIdString) {
-        console.warn(
-          "Skipping question due to missing _id:",
-          question.question
-        );
-        continue;
-      }
+      if (!currentQuestionIdString) continue;
 
       const questionSubmissions = submissions
         .map((sub) =>
           sub.answers.find(
-            (ans: ISubmissionAnswer) =>
-              ans.questionId === currentQuestionIdString
+            (ans) => ans.question_id.toString() === currentQuestionIdString
           )
         )
         .filter((ans): ans is ISubmissionAnswer => ans !== undefined);
 
-      // Initialize variables for the current question's result
       let totalCorrect = 0;
       let currentAnswersBreakdown: AnswerBreakdown[] = [];
       let currentSubmittedTextAnswers: string[] | undefined = undefined;
-      let currentCorrectOrganDisplayName: string | undefined = undefined;
+      let currentCorrectTargetDisplayName: string | undefined = undefined;
 
-      if (question.type === "select-organ" && question.expectedOrganId) {
-        currentCorrectOrganDisplayName =
-          organMap.get(question.expectedOrganId) || "Unknown Correct Organ";
+      // Determine correct target display name for select-organ questions
+      if (question.type === "select-organ" && question.target_id) {
+        if (question.targetType === "mesh") {
+          currentCorrectTargetDisplayName =
+            meshCatalogMap.get(question.target_id.toString())?.displayName ||
+            "Unknown Target Mesh";
+        } else if (question.targetType === "group") {
+          currentCorrectTargetDisplayName =
+            organGroupMap.get(question.target_id.toString())?.groupName ||
+            "Unknown Target Group";
+        }
       }
 
       if (
@@ -135,94 +174,112 @@ export async function GET(
         question.type === "true-false"
       ) {
         const optionCounts = new Array(question.answers?.length || 0).fill(0);
-
         questionSubmissions.forEach((submittedAnswer) => {
           if (
-            submittedAnswer.selectedAnswerId !== undefined &&
-            question.answers && // Ensure question.answers exists
-            submittedAnswer.selectedAnswerId >= 0 &&
-            submittedAnswer.selectedAnswerId < question.answers.length // Check bounds
+            submittedAnswer.selectedAnswerId_Index !== undefined &&
+            question.answers &&
+            submittedAnswer.selectedAnswerId_Index >= 0 &&
+            submittedAnswer.selectedAnswerId_Index < question.answers.length
           ) {
-            // Increment count for the CHOSEN OPTION INDEX
-            optionCounts[submittedAnswer.selectedAnswerId]++;
-
-            // Check if the chosen option index corresponds to a correct answer
-            if (question.answers[submittedAnswer.selectedAnswerId]?.isCorrect) {
+            optionCounts[submittedAnswer.selectedAnswerId_Index]++;
+            if (
+              question.answers[submittedAnswer.selectedAnswerId_Index]
+                ?.isCorrect
+            )
               totalCorrect++;
-            }
           }
         });
-
-        // Construct answersBreakdown by iterating through the original question options
-        // and using the counts from optionCounts (which are per-index)
         question.answers?.forEach((opt, index) => {
           currentAnswersBreakdown.push({
-            answerText: opt.text.toString(), // The display text of the option
-            studentCount: optionCounts[index], // The count for this specific option (by its index)
+            answerText: opt.text.toString(),
+            studentCount: optionCounts[index],
             isCorrectOption: Boolean(opt.isCorrect),
           });
         });
       } else if (question.type === "select-organ") {
-        const tempCounts: Record<string, number> = {};
+        const answerTargetCounts: Record<string, number> = {}; // Key: Clicked MeshCatalogItem ID
+
         questionSubmissions.forEach((submittedAnswer) => {
-          if (submittedAnswer.textResponse) {
-            const organId = submittedAnswer.textResponse;
-            tempCounts[organId] = (tempCounts[organId] || 0) + 1;
-            if (organId === question.expectedOrganId) totalCorrect++;
+          const clickedMeshId =
+            submittedAnswer.responseText_ClickedMesh_id?.toString();
+          if (clickedMeshId) {
+            answerTargetCounts[clickedMeshId] =
+              (answerTargetCounts[clickedMeshId] || 0) + 1;
+
+            // Determine correctness
+            let isCorrect = false;
+            if (question.targetType === "mesh") {
+              isCorrect = clickedMeshId === question.target_id?.toString();
+            } else if (question.targetType === "group") {
+              const clickedMeshDetail = meshCatalogMap.get(clickedMeshId);
+              if (clickedMeshDetail?.organGroupIds) {
+                isCorrect = clickedMeshDetail.organGroupIds.some(
+                  (groupId) =>
+                    groupId.toString() === question.target_id?.toString()
+                );
+              }
+            }
+            if (isCorrect) totalCorrect++;
           } else {
-            const noAnswerKey = "No Answer";
-            tempCounts[noAnswerKey] = (tempCounts[noAnswerKey] || 0) + 1;
+            answerTargetCounts["No Answer"] =
+              (answerTargetCounts["No Answer"] || 0) + 1;
           }
         });
 
-        const allRelevantOrganIds = new Set<string>();
-        if (
-          question.expectedOrganId &&
-          Types.ObjectId.isValid(question.expectedOrganId)
-        )
-          allRelevantOrganIds.add(question.expectedOrganId);
-        questionSubmissions.forEach((sa) => {
-          if (sa.textResponse && Types.ObjectId.isValid(sa.textResponse))
-            allRelevantOrganIds.add(sa.textResponse);
-        });
+        // Create breakdown based on what was clicked or the target
+        const allClickedOrTargetMeshIds = new Set<string>(
+          Object.keys(answerTargetCounts).filter((k) => k !== "No Answer")
+        );
+        if (question.targetType === "mesh" && question.target_id)
+          allClickedOrTargetMeshIds.add(question.target_id.toString());
+        // For group targets, the target_id is a group. Breakdown items will be clicked meshes.
 
-        allRelevantOrganIds.forEach((organId) => {
+        allClickedOrTargetMeshIds.forEach((meshIdStr) => {
+          const meshDetail = meshCatalogMap.get(meshIdStr);
+          let isOptionCorrect = false;
+          if (question.targetType === "mesh") {
+            isOptionCorrect = meshIdStr === question.target_id?.toString();
+          } else if (question.targetType === "group") {
+            if (meshDetail?.organGroupIds) {
+              isOptionCorrect = meshDetail.organGroupIds.some(
+                (gId) => gId.toString() === question.target_id?.toString()
+              );
+            }
+          }
           currentAnswersBreakdown.push({
             answerText:
-              organMap.get(organId) ||
-              `Unknown Organ (${organId.substring(0, 6)}...)`,
-            studentCount: tempCounts[organId] || 0,
-            isCorrectOption: organId === question.expectedOrganId,
+              meshDetail?.displayName ||
+              `Unknown Mesh (${meshIdStr.substring(0, 6)}...)`,
+            studentCount: answerTargetCounts[meshIdStr] || 0,
+            isCorrectOption: isOptionCorrect,
           });
         });
-        if (tempCounts["No Answer"]) {
+        if (answerTargetCounts["No Answer"]) {
           currentAnswersBreakdown.push({
             answerText: "No Answer",
-            studentCount: tempCounts["No Answer"],
+            studentCount: answerTargetCounts["No Answer"],
             isCorrectOption: false,
           });
         }
       } else if (question.type === "short-answer") {
-        currentSubmittedTextAnswers = []; // Initialize for this type
+        currentSubmittedTextAnswers = [];
         questionSubmissions.forEach((submittedAnswer) => {
           currentSubmittedTextAnswers!.push(
-            submittedAnswer.textResponse || "No Answer"
+            submittedAnswer.responseText_ShortAnswer || "No Answer"
           );
         });
-        // answersBreakdown remains empty for short-answer as it's not charted traditionally
-        totalCorrect = 0; // No automated way to determine correctness for short-answer yet
+        totalCorrect = 0;
       }
 
-      // Single push operation for each question
       questionResults.push({
         questionId: currentQuestionIdString,
-        questionText: question.question,
+        questionText: question.questionText,
         questionType: question.type,
         totalSubmissionsForQuestion: questionSubmissions.length,
         totalCorrect: totalCorrect,
-        answersBreakdown: currentAnswersBreakdown, // Populated for chartable types, empty for short-answer
-        submittedTextAnswers: currentSubmittedTextAnswers, // Populated for short-answer, undefined otherwise
-        correctOrganDisplayName: currentCorrectOrganDisplayName,
+        answersBreakdown: currentAnswersBreakdown,
+        submittedTextAnswers: currentSubmittedTextAnswers,
+        correctTargetDisplayName: currentCorrectTargetDisplayName,
       });
     }
 

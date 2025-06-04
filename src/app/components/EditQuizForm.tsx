@@ -1,77 +1,116 @@
 "use client";
 
-import { JSX, useState } from "react";
+import { JSX, useState, useEffect } from "react";
 import EditQuestionBox from "./EditQuestionBox";
 import { toast } from "sonner";
-import { redirect } from "next/navigation";
-
-interface Answer {
-  text: string;
-  isCorrect: boolean;
-}
-
-interface Question {
-  question: string;
-  type: string;
-  answers: Answer[];
-}
+import { useRouter } from "next/navigation";
+import type { FrontendQuestion, FrontendAnswer } from "../lib/types";
+import { DateTimePicker24h } from "./DateTimePicker";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface EditQuizFormProps {
   id: string;
   initialTitle: string;
   initialDescription: string;
-  initialQuestions: Question[];
-  initialScheduledAt?: Date;
+  initialStudyYear: number;
+  initialQuestions: FrontendQuestion[];
+  initialScheduledAt?: Date | string; // Allow string for initial fetch
 }
 
 /**
  * A form component for editing a quiz.
  *
- * The component renders a form with input fields for the quiz title, description, and questions.
- * The component also renders a button to submit the quiz. When the button is clicked, the
- * component sends a PUT request to the server with the sanitized quiz data, and alerts the
- * user whether the quiz was updated successfully or not.
+ * The form component renders a series of input fields and other components to edit the
+ * quiz title, description, study year, questions, and scheduled date and time.
  *
- * @param {{ id: string, initialTitle: string, initialDescription: string, initialQuestions: Question[], initialScheduledAt?: Date }} props - The props object containing the quiz id, title, description, questions, and scheduledAt.
- * @returns {JSX.Element} A JSX element containing the form for editing the quiz.
+ * The component also renders a button to add a new question, and a button to delete the
+ * quiz.
+ *
+ * The component accepts the following props:
+ *
+ * - `id`: The ID of the quiz to be edited.
+ * - `initialTitle`: The initial title of the quiz.
+ * - `initialDescription`: The initial description of the quiz.
+ * - `initialStudyYear`: The initial study year of the quiz.
+ * - `initialQuestions`: The initial questions of the quiz.
+ * - `initialScheduledAt`: The initial scheduled date and time of the quiz.
+ *
+ * The component returns a JSX element containing the form.
  */
 export default function EditQuizForm({
   id,
   initialTitle,
   initialDescription,
+  initialStudyYear,
   initialQuestions,
   initialScheduledAt,
 }: EditQuizFormProps): JSX.Element {
+  const router = useRouter();
   const [title, setTitle] = useState(initialTitle);
   const [description, setDescription] = useState(initialDescription);
-  const [questions, setQuestions] = useState(initialQuestions);
-  const [scheduledAt, setScheduledAt] = useState(initialScheduledAt);
+  const [studyYear, setStudyYear] = useState<number | undefined>(
+    initialStudyYear
+  );
+  const [questions, setQuestions] = useState<FrontendQuestion[]>(
+    // Ensure initial questions have all fields, even if undefined
+    initialQuestions.map((q) => ({
+      ...q,
+      questionText: q.questionText || (q as any).question || "",
+      answers: q.answers || [],
+      targetType: q.targetType || undefined,
+      target_id: q.target_id || undefined,
+    }))
+  );
+  const [scheduledAt, setScheduledAt] = useState<Date | undefined>(
+    initialScheduledAt ? new Date(initialScheduledAt) : undefined
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  /**
-   * Handles changes to the question input fields by updating the questions state.
-   *
-   * @param {number} index The index of the question that was changed.
-   * @param {string} value The new value of the question input field.
-   */
-  const handleQuestionChange = (index: number, value: string) => {
+  // Handler for question text
+  const handleQuestionTextChange = (index: number, newText: string) => {
     setQuestions((prev) =>
-      prev.map((q, i) => (i === index ? { ...q, question: value } : q))
+      prev.map((q, i) => (i === index ? { ...q, questionText: newText } : q))
     );
   };
 
-  /**
-   * Handles changes to the answer input fields by updating the questions state.
-   *
-   * @param {number} questionIndex The index of the question that the answer belongs to.
-   * @param {number} answerIndex The index of the answer that was changed.
-   * @param {string} value The new value of the answer input field.
-   */
-  const handleAnswerChange = (
+  // Handler for question type
+  const handleQuestionTypeChange = (index: number, newType: string) => {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === index
+          ? {
+              ...q,
+              type: newType,
+              // Reset target fields if type is not select-organ
+              targetType: newType === "select-organ" ? q.targetType : undefined,
+              target_id: newType === "select-organ" ? q.target_id : undefined,
+              // Reset answers if type changes to something that doesn't use them or uses them differently
+              answers:
+                newType === "multiple-choice" || newType === "true-false"
+                  ? q.answers
+                  : [],
+            }
+          : q
+      )
+    );
+  };
+
+  // Handler for answer text
+  const handleAnswerTextChange = (
     questionIndex: number,
     answerIndex: number,
-    value: string
+    newText: string
   ) => {
     setQuestions((prev) =>
       prev.map((q, i) =>
@@ -79,7 +118,7 @@ export default function EditQuizForm({
           ? {
               ...q,
               answers: q.answers.map((a, j) =>
-                j === answerIndex ? { ...a, text: value } : a
+                j === answerIndex ? { ...a, text: newText } : a
               ),
             }
           : q
@@ -87,169 +126,277 @@ export default function EditQuizForm({
     );
   };
 
-  /**
-   * Adds a new question to the quiz.
-   *
-   * @remarks
-   * This function adds a new question to the quiz by appending a new question object
-   * to the questions state. The new question object has an empty question string, no
-   * type, and an empty array of answers.
-   */
-  const handleAddQuestion = () => {
-    setQuestions((prev) => [...prev, { question: "", type: "", answers: [] }]);
-  };
-
-  /**
-   * Adds a new answer to the question at the given index.
-   *
-   * @param {number} questionIndex The index of the question that the answer should be added to.
-   *
-   * @remarks
-   * This function adds a new answer to the question at the given index by appending a new answer object
-   * to the answers array of the question object. The new answer object has an empty text string and isCorrect set to false.
-   */
-  const handleAddAnswer = (questionIndex: number) => {
+  // Handler for setting correct answer
+  const handleSetCorrectAnswer = (
+    questionIndex: number,
+    answerIndex: number
+  ) => {
     setQuestions((prev) =>
       prev.map((q, i) =>
         i === questionIndex
           ? {
               ...q,
-              answers: [...q.answers, { text: "", isCorrect: false }],
+              answers: q.answers.map((a, j) => ({
+                ...a,
+                isCorrect: j === answerIndex,
+              })),
             }
           : q
       )
     );
   };
 
+  // Handler for adding an answer
+  const handleAddAnswer = (questionIndex: number) => {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === questionIndex
+          ? {
+              ...q,
+              answers: [
+                ...(q.answers || []),
+                { text: "", isCorrect: false, _id: `new_${Date.now()}` },
+              ],
+            }
+          : q
+      )
+    );
+  };
+
+  // Handler for removing an answer
+  const handleRemoveAnswer = (questionIndex: number, answerIndex: number) => {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === questionIndex
+          ? { ...q, answers: q.answers.filter((_, j) => j !== answerIndex) }
+          : q
+      )
+    );
+  };
+
+  // Handler for adding a question
+  const handleAddQuestion = () => {
+    setQuestions((prev) => [
+      ...prev,
+      {
+        _id: `new_q_${Date.now()}`, // Temporary client-side key/ID
+        questionText: "",
+        type: "multiple-choice", // Default type
+        answers: [],
+        targetType: undefined,
+        target_id: undefined,
+      },
+    ]);
+  };
+
+  // Handler for removing a question
+  const handleRemoveQuestion = (questionIndex: number) => {
+    setQuestions((prev) => prev.filter((_, i) => i !== questionIndex));
+  };
+
+  // Handler for target type
+  const handleChangeTargetType = (
+    questionIndex: number,
+    targetType: "mesh" | "group" | undefined
+  ) => {
+    setQuestions(
+      (prev) =>
+        prev.map((q, i) =>
+          i === questionIndex
+            ? { ...q, targetType: targetType, target_id: undefined }
+            : q
+        ) // Reset target_id when type changes
+    );
+  };
+
+  // Handler for target ID
+  const handleChangeTargetId = (
+    questionIndex: number,
+    targetId: string | undefined
+  ) => {
+    setQuestions((prev) =>
+      prev.map((q, i) =>
+        i === questionIndex ? { ...q, target_id: targetId } : q
+      )
+    );
+  };
+
   /**
-   * Handles the submission of the quiz form by sending a PUT request to the server.
-   *
-   * @remarks
-   * This function is called when the submit button is clicked. It prevents the default
-   * form submission behavior, sets the loading state to true, and clears any error
-   * messages. Then, it sends a PUT request to the server with the updated quiz data.
-   * If the request is successful, it shows an alert box with a success message. If
-   * the request fails, it shows an alert box with an error message. Finally, it sets
-   * the loading state back to false.
+   * Handles form submission by sending a PUT request to the server
+   * with the updated quiz data. If the request is successful, it
+   * displays a success toast message. If the request fails, it
+   * displays an error toast message and sets the error state.
+   * @param {React.FormEvent} e The form event
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
+    setError(null);
+
+    if (studyYear === undefined) {
+      setError("Study year is required.");
+      setLoading(false);
+      toast.error("Study year is required.");
+      return;
+    }
+
+    // Prepare questions for submission, ensuring _id is handled correctly
+    const questionsToSubmit = questions.map((q) => {
+      const { _id, ...questionData } = q; // Separate client-side _id
+      return {
+        ...(q._id && !q._id.startsWith("new_") ? { _id: q._id } : {}), // Keep existing DB _id
+        ...questionData,
+        answers: q.answers.map((a) => {
+          const { _id: ansId, ...answerData } = a;
+          return {
+            ...(a._id && !a._id.startsWith("new_") ? { _id: a._id } : {}),
+            ...answerData,
+          };
+        }),
+      };
+    });
 
     try {
+      const payload = {
+        title,
+        description,
+        studyYear,
+        questions: questionsToSubmit,
+        scheduledAt: scheduledAt?.toISOString() || null,
+      };
       const response = await fetch(`/api/quizzes/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, description, questions, scheduledAt }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to update quiz");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to update quiz");
       }
-
-      toast("Quiz updated successfully");
+      toast.success("Quiz updated successfully!");
     } catch (err) {
-      setError("Error updating quiz");
+      setError(err instanceof Error ? err.message : "Error updating quiz");
+      toast.error(err instanceof Error ? err.message : "Error updating quiz");
     } finally {
       setLoading(false);
     }
   };
 
+  /**
+   * Handles deleting a quiz by sending a DELETE request to the server
+   * with the quiz ID. If the request is successful, it displays a success
+   * toast message and navigates to the home page. If the request fails, it
+   * displays an error toast message and sets the error state.
+   */
   const handleDeleteQuiz = async () => {
-    try {
-      await fetch(`/api/quizzes/${id}`, {
-        method: "DELETE",
-      });
-      toast("Quiz deleted successfully");
-    } catch (err) {
-      setError("Error deleting quiz");
+    if (window.confirm("Are you sure you want to delete this quiz?")) {
+      setLoading(true);
+      try {
+        const response = await fetch(`/api/quizzes/${id}`, {
+          method: "DELETE",
+        });
+        if (!response.ok) throw new Error("Failed to delete quiz");
+        toast.success("Quiz deleted successfully");
+        router.push("/"); // Navigate to home
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Error deleting quiz");
+        toast.error(err instanceof Error ? err.message : "Error deleting quiz");
+        setLoading(false);
+      }
     }
-
-    redirect("/");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="mb-4">
-        <label
-          htmlFor="title"
-          className="block mb-2 text-sm font-medium text-gray-900"
-        >
-          Title
-        </label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-        />
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <Label htmlFor="title">Title</Label>
+          <Input
+            id="title"
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="mt-2"
+            required
+          />
+        </div>
+        <div>
+          <Label htmlFor="studyYear" className="mb-2">
+            Study Year
+          </Label>
+          <Select
+            value={studyYear !== undefined ? String(studyYear) : ""}
+            onValueChange={(value) =>
+              setStudyYear(value ? parseInt(value) : undefined)
+            }
+            required
+          >
+            <SelectTrigger id="studyYear">
+              <SelectValue placeholder="Select study year" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="1">Year 1</SelectItem>
+              <SelectItem value="2">Year 2</SelectItem>
+              <SelectItem value="3">Year 3</SelectItem>
+              <SelectItem value="4">Year 4</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
-      <div className="mb-4">
-        <label
-          htmlFor="description"
-          className="block mb-2 text-sm font-medium text-gray-900"
-        >
-          Description
-        </label>
-        <textarea
+
+      <div>
+        <Label htmlFor="description">Description</Label>
+        <Textarea
           id="description"
-          name="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          className="mt-2"
         />
       </div>
-      {questions.map((question, index) => (
-        <EditQuestionBox
-          key={index}
-          index={index}
-          question={question}
-          onChangeQuestion={handleQuestionChange}
-          onChangeAnswer={handleAnswerChange}
-          onSetCorrect={(questionIndex, answerIndex) =>
-            setQuestions((prev) =>
-              prev.map((q, i) =>
-                i === questionIndex
-                  ? {
-                      ...q,
-                      answers: q.answers.map((a, j) => ({
-                        ...a,
-                        isCorrect: j === answerIndex,
-                      })),
-                    }
-                  : q
-              )
-            )
-          }
-          onAddAnswer={handleAddAnswer}
-        />
-      ))}
 
-      <button
-        type="button"
-        onClick={handleAddQuestion}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2"
-      >
-        Add question
-      </button>
-      <button
-        type="submit"
-        disabled={loading}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded mr-2"
-      >
-        {loading ? "Updating..." : "Update Quiz"}
-      </button>
-      <button
-        type="button"
-        onClick={handleDeleteQuiz}
-        className="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded"
-      >
-        Delete Quiz
-      </button>
-      {error && <p className="text-red-500">{error}</p>}
+      <div>
+        <Label className="mb-2">Date and Time to be Scheduled</Label>
+        <DateTimePicker24h date={scheduledAt} setDate={setScheduledAt} />
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold">Questions</h3>
+        {questions.map((question, index) => (
+          <EditQuestionBox
+            key={question._id || `q-${index}`} // Use existing _id or temporary key
+            index={index}
+            question={question}
+            onChangeQuestionText={handleQuestionTextChange}
+            onChangeQuestionType={handleQuestionTypeChange}
+            onChangeAnswerText={handleAnswerTextChange}
+            onSetCorrectAnswer={handleSetCorrectAnswer}
+            onAddAnswer={handleAddAnswer}
+            onRemoveAnswer={handleRemoveAnswer}
+            onRemoveQuestion={handleRemoveQuestion}
+            onChangeTargetType={handleChangeTargetType}
+            onChangeTargetId={handleChangeTargetId}
+          />
+        ))}
+        <Button type="button" onClick={handleAddQuestion} variant="outline">
+          Add Question
+        </Button>
+      </div>
+
+      <div className="flex justify-end space-x-3 pt-4">
+        <Button
+          type="button"
+          variant="destructive"
+          onClick={handleDeleteQuiz}
+          disabled={loading}
+        >
+          Delete Quiz
+        </Button>
+        <Button type="submit" disabled={loading}>
+          {loading ? "Updating..." : "Update Quiz"}
+        </Button>
+      </div>
+      {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
     </form>
   );
 }
