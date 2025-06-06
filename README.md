@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Virtual Anatomy Quizzing System
 
-## Getting Started
+## 1. Overview
 
-First, run the development server:
+The API and quiz creation system for the [Virtual Anatomy](https://github.com/jrcz-data-science-lab/Virtual-Anatomy-UE) project
+
+## 2. Features
+
+- **Quiz Management**: Teachers can create, edit, schedule, and delete quizzes.
+- **Study Year Grouping**: Quizzes are authored for a specific study year (e.g., Year 1, Year 4), allowing question difficulty and detail to be adjusted accordingly.
+- **Dynamic "Select Organ" Questions**: This question type can target either a broad anatomical region (an "Organ Group") or a specific 3D mesh (`MeshCatalogItem`), making it adaptable for different knowledge levels.
+- **Multiple Question Types**: Supports "Multiple Choice", "True/False", "Select Organ", and "Short Answer" questions.
+- **Anatomical Data Catalog**: A database-driven catalog (`meshCatalogItems` and `organGroups`) defines all interactable 3D meshes and their relationships to broader anatomical groups.
+- **Quiz Submission API**: A dedicated endpoint (`/api/submissions`) for the Unreal Engine client to submit completed quiz answers in a single request.
+- **Results Dashboard**: A detailed results page for teachers to analyze quiz performance on a per-question basis with charts and response lists.
+
+## 3. Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Database**: MongoDB with Mongoose ODM
+- **API**: REST (implemented via Next.js API Routes)
+- **UI Components**: ShadCN UI, built on Radix UI & Tailwind CSS
+- **Charting**: Recharts
+- **3D Client**: Unreal Engine (consumes the API)
+
+## 4. Project Structure
+
+A brief overview of the key directories in this repository:
+
+```
+/src
+├── app  
+│   ├── api  # All REST route handlers
+│   │   ├── mesh-catalog
+│   │   ├── organ-groups
+│   │   ├── organs
+│   │   ├── quizzes
+│   │   │   └── [id]
+│   │   │       └── results
+│   │   ├── submissions
+│   │   └── unreal_testing
+│   │       └── [id]
+│   ├── components  # Reusable components
+│   ├── create
+│   ├── edit
+│   │   └── [id]
+│   ├── lib  # Custom hooks & utility functions
+│   ├── models  # Mongoose schemas
+│   ├── planned
+│   └── results
+│       └── [id]
+├── components  # ShadCN components
+│   └── ui
+└── lib
+
+```
+
+## 5. Setup and Installation
+
+Follow these steps to get the project running locally.
+
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm or yarn
+- An active MongoDB instance (local or a cloud service like MongoDB Atlas)
+
+### Installation Steps
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jrcz-data-science-lab/virtual_anatomy_quiz_ts
+cd virtual_anatomy_quiz_ts
+```
+
+Install dependencies:
+
+```bash
+npm install --force
+# or
+yarn install --force
+```
+
+Set up environment variables:
+
+- Create a `.env` file in the root of the project by copying the `.env.example` file
+- Add your MongoDB connection string:
+
+```env
+MONGODB_URI="your_mongodb_connection_string"
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running on [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 6. API Endpoints
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application exposes several REST endpoints:
 
-## Learn More
+- `GET /api/quizzes`: Retrieves a list of all quizzes. Can be filtered by study year (e.g., `?studyYear=1`).
+- `POST /api/quizzes`: Creates a new quiz.
+- `GET, PUT, DELETE /api/quizzes/[id]`: Fetches, updates, or deletes a specific quiz.
+- `POST /api/submissions`: Submits answers for a completed quiz from Unreal Engine.
+- `GET /api/quizzes/[id]/results`: Retrieves aggregated, chart-ready results for a specific quiz.
+- `GET /api/mesh-catalog`: Fetches anatomical mesh data. Supports searching (e.g., `?search=femur`).
+- `GET /api/organ-groups`: Fetches anatomical group data. Supports searching (e.g., `?search=bones`).
 
-To learn more about Next.js, take a look at the following resources:
+## 7. Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: Starts the application in development mode.
+- `npm run build`: Creates a production build of the application.
+- `npm run start`: Starts the production server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 8. Future Development
 
-## Deploy on Vercel
+Potential future ideas for this system are:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Implementing a full grading system to store scores on submissions.
+- Adding user authentication and roles (e.g., Teacher, Student Admin).
+- Building a web UI for managing the Mesh Catalog and Organ Groups directly within the application.
+- Quiz templates
