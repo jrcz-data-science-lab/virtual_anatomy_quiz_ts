@@ -110,19 +110,21 @@ const quizRequestBodySchema = z.object({
 });
 
 /**
- * Handles GET requests to retrieve all quizzes from the database.
+ * Handles GET requests to retrieve quizzes from the database.
  *
- * The function first connects to the database using the {@link dbConnect} function.
- * Then, it performs a `find` query on the `Quiz` model with an optional filter
- * by `studyYear` if the `studyYear` query parameter is provided in the URL. The
- * function returns an array of quizzes, sorted in descending order by creation
- * date, and a status code of 200 on success. If the query fails, the function
- * logs an error and returns an error response with a status code of 500.
+ * This function connects to the database and fetches quizzes based on optional
+ * query parameters for study year and month. The results are sorted by creation
+ * date in descending order.
+ *
+ * Query Parameters:
+ * - studyYear: Filters quizzes by the specified study year.
+ * - month: Filters quizzes scheduled within the specified month (format: YYYY-MM).
+ *
+ * Returns a 400 status with an error message if the study year parameter is invalid.
+ * Logs and returns a 500 status with an error message if an exception occurs.
  *
  * @param {Request} req - The incoming HTTP request.
- * @returns {Promise<NextResponse>} A promise that resolves with the HTTP response.
- * @example
- * GET /api/quizzes?studyYear=1
+ * @returns {Promise<NextResponse>} The response containing the list of quizzes or an error message.
  */
 export async function GET(req: Request): Promise<NextResponse> {
   try {
@@ -130,6 +132,7 @@ export async function GET(req: Request): Promise<NextResponse> {
 
     const { searchParams } = new URL(req.url);
     const studyYearQuery = searchParams.get("studyYear");
+    const monthQuery = searchParams.get("month");
 
     const filter: any = {};
     if (studyYearQuery) {
@@ -141,6 +144,22 @@ export async function GET(req: Request): Promise<NextResponse> {
           { error: "Invalid studyYear parameter. Must be a number." },
           { status: 400 }
         );
+      }
+    }
+
+    // Filter by month
+    if (monthQuery) {
+      const year = parseInt(monthQuery.substring(0, 4), 10);
+      const month = parseInt(monthQuery.substring(5, 7), 10);
+
+      if (!isNaN(year) && !isNaN(month)) {
+        const startDate = new Date(Date.UTC(year, month - 1, 1));
+        const endDate = new Date(Date.UTC(year, month, 1));
+
+        filter.scheduledAt = {
+          $gte: startDate,
+          $lt: endDate,
+        };
       }
     }
 
