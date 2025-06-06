@@ -3,6 +3,7 @@
 import { JSX, useState } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 type Quiz = {
   _id: string;
@@ -16,7 +17,7 @@ type Quiz = {
  * A component for displaying a list of quizzes. The component renders a search
  * bar and a grid of cards, each representing a quiz. The component filters the
  * list of quizzes based on the search term, and renders the following information
- * for each quiz: title, description, status, number of questions, and scheduled
+ * for each quiz: title, description, number of questions, and scheduled
  * date.
  *
  * @param {{ quizzes: Quiz[] }} props - The props object containing the list of
@@ -36,12 +37,12 @@ export default function QuizList({
 
   return (
     <div>
-      <input
+      <Input
         type="text"
         placeholder="Search quizzes..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="border border-gray-300 rounded-lg px-4 py-2 my-4 w-full"
+        className="border border-gray-300 rounded-lg px-4 py-2 my-4 w-full max-w-md"
       />
 
       {filteredQuizzes.length === 0 ? (
