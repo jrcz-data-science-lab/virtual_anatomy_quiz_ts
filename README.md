@@ -78,9 +78,9 @@ cd virtual_anatomy_quiz_ts
 Install dependencies:
 
 ```bash
-npm install --force
+npm install
 # or
-yarn install --force
+yarn install
 ```
 
 Set up environment variables:
