@@ -17,7 +17,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { getOrgans } from "../lib/getOrgans";
 import type { OrganClient } from "../lib/types";
 
 interface OrgansComboboxProps {
