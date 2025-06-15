@@ -76,10 +76,10 @@ describe("/api/quizzes route", () => {
             ]),
           }),
         ]),
-        __v: expect.any(Number), // Mongoose adds __v
+        __v: expect.any(Number),
         createdAt: expect.any(String), // Mongoose adds createdAt
         updatedAt: expect.any(String), // Mongoose adds updatedAt
-        scheduledAt: null, // Expect null as per the provided quizData
+        scheduledAt: null,
       })
     );
   });

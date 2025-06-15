@@ -1,5 +1,4 @@
-// src/tests/api/submissions/route.test.ts
-import { describe, expect, it, vi, beforeEach, type Mock } from "vitest"; // Added 'type Mock'
+import { describe, expect, it, vi, beforeEach, type Mock } from "vitest";
 import { GET, POST } from "@/app/api/submissions/route";
 import {
   Quiz,
@@ -19,8 +18,8 @@ vi.mock("@/app/models/Quiz", () => ({
     create: vi.fn(),
     prototype: { save: vi.fn() },
   },
-  MeshCatalogItem: {}, // Not directly used in submissions route, but needed for mock consistency
-  OrganGroup: {}, // Not directly used in submissions route, but needed for mock consistency
+  MeshCatalogItem: {},
+  OrganGroup: {},
 }));
 
 // Mock dbConnect

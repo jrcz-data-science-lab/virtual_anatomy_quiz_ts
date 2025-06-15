@@ -1,5 +1,4 @@
-// src/tests/api/quizzes/[id]/results/route.test.ts
-import { describe, expect, it, vi, beforeEach, type Mock } from "vitest"; // Added 'type Mock'
+import { describe, expect, it, vi, beforeEach, type Mock } from "vitest";
 import { GET } from "@/app/api/quizzes/[id]/results/route";
 import {
   Quiz,
@@ -50,17 +49,14 @@ describe("/api/quizzes/[id]/results route", () => {
     vi.clearAllMocks();
 
     // Default mocks for Quiz.findById and Submission.find (can be overridden per test)
-    (Quiz.findById as Mock).mockResolvedValue(null); // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(null);
     (Submission.find as Mock).mockReturnValue({
-      // Changed vi.Mock to Mock
       lean: vi.fn().mockResolvedValue([]),
     });
     (MeshCatalogItem.find as Mock).mockReturnValue({
-      // Changed vi.Mock to Mock
       lean: vi.fn().mockResolvedValue([]),
     });
     (OrganGroup.find as Mock).mockReturnValue({
-      // Changed vi.Mock to Mock
       lean: vi.fn().mockResolvedValue([]),
     });
   });
@@ -77,7 +73,7 @@ describe("/api/quizzes/[id]/results route", () => {
   });
 
   it("should return 404 if quiz not found", async () => {
-    (Quiz.findById as Mock).mockResolvedValue(null); // Explicitly ensure quiz not found // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(null); // Explicitly ensure quiz not found
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
@@ -131,10 +127,10 @@ describe("/api/quizzes/[id]/results route", () => {
       },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz); // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
-    }); // Changed vi.Mock to Mock
+    });
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
@@ -195,10 +191,10 @@ describe("/api/quizzes/[id]/results route", () => {
       },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz); // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
-    }); // Changed vi.Mock to Mock
+    });
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
@@ -213,7 +209,7 @@ describe("/api/quizzes/[id]/results route", () => {
       questionText: "Explain respiration",
       questionType: "short-answer",
       totalSubmissionsForQuestion: 2,
-      totalCorrect: 0, // Short answer has no predefined correct count in this API
+      totalCorrect: 0, // Short answer has no predefined correct count in the API
       answersBreakdown: [], // Short answer does not have answer breakdown
       submittedTextAnswers: expect.arrayContaining([
         "Breathing",
@@ -276,13 +272,13 @@ describe("/api/quizzes/[id]/results route", () => {
       { _id: mockMeshId2, meshName: "lung_mesh", displayName: "Lung" },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz); // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
-    }); // Changed vi.Mock to Mock
+    });
     (MeshCatalogItem.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockMeshCatalogItems),
-    }); // Changed vi.Mock to Mock
+    });
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
@@ -361,16 +357,16 @@ describe("/api/quizzes/[id]/results route", () => {
     ];
     const mockOrganGroups = [{ _id: mockGroupId1, groupName: "Upper Limb" }];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz); // Changed vi.Mock to Mock
+    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
-    }); // Changed vi.Mock to Mock
+    });
     (MeshCatalogItem.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockMeshCatalogItems),
-    }); // Changed vi.Mock to Mock
+    });
     (OrganGroup.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockOrganGroups),
-    }); // Changed vi.Mock to Mock
+    });
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
