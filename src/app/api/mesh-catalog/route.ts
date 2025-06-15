@@ -38,7 +38,6 @@ export async function GET(req: Request): Promise<NextResponse> {
       filter = { ...filter, meshName: meshNameQuery };
     }
 
-    // ! Later add pagination
     const meshItems = await MeshCatalogItem.find(filter).limit(50).lean();
 
     return NextResponse.json(meshItems, { status: 200 });
