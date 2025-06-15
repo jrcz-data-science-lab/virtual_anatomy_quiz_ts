@@ -52,8 +52,7 @@ const Navbar = (): JSX.Element => {
           </Link>
         </nav>
         <Avatar>
-          <AvatarImage src="https://i.pinimg.com/736x/b4/bb/b2/b4bbb2198b036fe1024571ec6b60f8b8.jpg" />
-          <AvatarFallback>XD</AvatarFallback>
+          <AvatarFallback>HZ</AvatarFallback>
         </Avatar>
       </div>
     </header>
