@@ -29,31 +29,36 @@ The API and quiz creation system for the [Virtual Anatomy](https://github.com/jr
 A brief overview of the key directories in this repository:
 
 ```
-/src
-├── app  
-│   ├── api  # All REST route handlers
-│   │   ├── mesh-catalog
-│   │   ├── organ-groups
-│   │   ├── organs
-│   │   ├── quizzes
+/src.
+├── app
+│   ├── api
+│   │   ├── mesh-catalog  # Routes to handle specific meshes
+│   │   ├── organ-groups  # Routes to handle organ-groups
+│   │   ├── quizzes  # Routes to handle quiz data
 │   │   │   └── [id]
-│   │   │       └── results
-│   │   ├── submissions
-│   │   └── unreal_testing
-│   │       └── [id]
-│   ├── components  # Reusable components
-│   ├── create
+│   │   │       └── results  # Routes to handle specific results of a specific quiz
+│   │   └── submissions  # Routes to handle submissions
+│   ├── api-docs  # Scalar documentation page
+│   ├── components  # Specific components
+│   ├── create  # Quiz creation page
 │   ├── edit
-│   │   └── [id]
-│   ├── lib  # Custom hooks & utility functions
-│   ├── models  # Mongoose schemas
-│   ├── planned
-│   └── results
-│       └── [id]
+│   │   └── [id]  # Edit a specific quiz
+│   ├── lib  # Custom hooks & other random stuff
+│   ├── models  # Mongoose models
+│   ├── planned  # Planned quizzes
+│   └── results  # Results page
+│       └── [id]  # Results per quiz
 ├── components  # ShadCN components
 │   └── ui
-└── lib
-
+├── lib
+└── tests  # Unit tests per API route
+    └── api
+        ├── mesh-catalog
+        ├── organ-groups
+        ├── quizzes
+        │   └── [id]
+        │       └── results
+        └── submissions
 ```
 
 ## 5. Setup and Installation
@@ -78,18 +83,19 @@ cd virtual_anatomy_quiz_ts
 Install dependencies:
 
 ```bash
-npm install
+npm install --force
 # or
-yarn install
+yarn install --force
 ```
 
 Set up environment variables:
 
 - Create a `.env` file in the root of the project by copying the `.env.example` file
-- Add your MongoDB connection string:
+- Add your MongoDB connection strings:
 
 ```env
 MONGODB_URI="your_mongodb_connection_string"
+MONGODB_URI_TEST="your_mongodb_connection_string/testingdb"
 ```
 
 Run the development server:
@@ -117,6 +123,7 @@ The application exposes several REST endpoints:
 - `npm run dev`: Starts the application in development mode.
 - `npm run build`: Creates a production build of the application.
 - `npm run start`: Starts the production server.
+- `npm run test`: Runs the unit tests
 
 ## 8. Future Development
 
@@ -124,5 +131,5 @@ Potential future ideas for this system are:
 
 - Implementing a full grading system to store scores on submissions.
 - Adding user authentication and roles (e.g., Teacher, Student Admin).
-- Building a web UI for managing the Mesh Catalog and Organ Groups directly within the application.
+- Building a web UI for managing the Mesh Catalog and Organ Groups directly within the application (CRUD meshes and organ groups directly from this site).
 - Quiz templates
