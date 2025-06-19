@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI =
+  process.env.NODE_ENV === "test"
+    ? (process.env.MONGODB_URI_TEST as string)
+    : (process.env.MONGODB_URI as string);
 
 if (!MONGODB_URI) {
   throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env"
+    "Please define the MONGODB_URI and MONGODB_URI_TEST environment variables inside .env"
   );
 }
 
@@ -23,7 +26,7 @@ async function dbConnect(): Promise<void> {
 
   try {
     await mongoose.connect(MONGODB_URI, options);
-    console.log("Connected to MongoDB");
+    console.log(`Connected to MongoDB: ${mongoose.connection.name}`);
   } catch (error) {
     console.error("Failed to connect to MongoDB", error);
   }
