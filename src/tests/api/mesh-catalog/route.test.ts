@@ -118,8 +118,9 @@ describe("/api/mesh-catalog route", () => {
   });
 
   it("should create a new mesh catalog item", async () => {
+    const uniqueMeshName = `new_test_mesh_${Date.now()}`;
     const newMeshItemData = {
-      meshName: "new_test_mesh",
+      meshName: uniqueMeshName,
       displayName: "New Test Mesh",
       defaultStudyYear: 1,
       organGroupIds: ["507f1f77bcf86cd799439011"], // Example ObjectId

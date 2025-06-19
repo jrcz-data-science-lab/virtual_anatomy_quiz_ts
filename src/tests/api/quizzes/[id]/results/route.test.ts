@@ -48,8 +48,10 @@ describe("/api/quizzes/[id]/results route", () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
-    // Default mocks for Quiz.findById and Submission.find (can be overridden per test)
-    (Quiz.findById as Mock).mockResolvedValue(null);
+    // Default mocks for chained queries
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(null),
+    });
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue([]),
     });
@@ -73,7 +75,9 @@ describe("/api/quizzes/[id]/results route", () => {
   });
 
   it("should return 404 if quiz not found", async () => {
-    (Quiz.findById as Mock).mockResolvedValue(null); // Explicitly ensure quiz not found
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(null),
+    });
 
     const req = new Request(
       `http://localhost:3000/api/quizzes/${mockQuizId.toHexString()}/results`
@@ -127,7 +131,9 @@ describe("/api/quizzes/[id]/results route", () => {
       },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(mockQuiz),
+    });
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
     });
@@ -149,7 +155,7 @@ describe("/api/quizzes/[id]/results route", () => {
       answersBreakdown: expect.arrayContaining([
         { answerText: "3", studentCount: 1, isCorrectOption: false },
         { answerText: "4", studentCount: 2, isCorrectOption: true },
-        { answerText: "5", studentCount: 0, isCorrectOption: false }, // Even if no submissions, it should be listed
+        { answerText: "5", studentCount: 0, isCorrectOption: false },
       ]),
     });
   });
@@ -191,7 +197,9 @@ describe("/api/quizzes/[id]/results route", () => {
       },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(mockQuiz),
+    });
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
     });
@@ -272,7 +280,9 @@ describe("/api/quizzes/[id]/results route", () => {
       { _id: mockMeshId2, meshName: "lung_mesh", displayName: "Lung" },
     ];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(mockQuiz),
+    });
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
     });
@@ -357,7 +367,9 @@ describe("/api/quizzes/[id]/results route", () => {
     ];
     const mockOrganGroups = [{ _id: mockGroupId1, groupName: "Upper Limb" }];
 
-    (Quiz.findById as Mock).mockResolvedValue(mockQuiz);
+    (Quiz.findById as Mock).mockReturnValue({
+      lean: vi.fn().mockResolvedValue(mockQuiz),
+    });
     (Submission.find as Mock).mockReturnValue({
       lean: vi.fn().mockResolvedValue(mockSubmissions),
     });
