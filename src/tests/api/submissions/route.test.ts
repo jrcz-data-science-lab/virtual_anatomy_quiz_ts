@@ -10,9 +10,7 @@ import mongoose from "mongoose";
 
 // Mock Mongoose models
 vi.mock("@/app/models/Quiz", () => {
-  // Create a mock constructor function for Submission
   const SubmissionMock = vi.fn();
-  // Attach a mock static 'find' method to the constructor
   (SubmissionMock as any).find = vi.fn();
 
   return {
@@ -92,7 +90,7 @@ describe("/api/submissions route", () => {
       expect(res.status).toBe(201);
       const responseBody = await res.json();
       expect(responseBody.success).toBe(true);
-      expect(responseBody.submissionId).toBeDefined(); // This will now pass
+      expect(responseBody.submissionId).toBeDefined();
     });
 
     it("should return 400 for invalid or missing quiz_id", async () => {
