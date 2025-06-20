@@ -24,7 +24,7 @@ const Navbar = (): JSX.Element => {
    */
   const isActive = (path: string): string => {
     return pathname === path
-      ? "mr-5 text-gray-900"
+      ? "mr-5 text-gray-900 font-semibold"
       : "mr-5 hover:text-gray-900";
   };
 
@@ -43,9 +43,6 @@ const Navbar = (): JSX.Element => {
           </Link>
           <Link href="/planned" className={isActive("/planned")}>
             Planned
-          </Link>
-          <Link href="/groups" className={isActive("/groups")}>
-            Groups
           </Link>
           <Link href="/results" className={isActive("/results")}>
             Results
