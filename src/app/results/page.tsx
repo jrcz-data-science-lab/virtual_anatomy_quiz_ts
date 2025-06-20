@@ -118,23 +118,22 @@ export default function SelectQuizForResultsPage() {
               onClick={() => handleQuizSelect(quiz._id)}
             >
               {" "}
-              {/* */}
               <CardHeader>
                 {" "}
-                {/* */}
-                <CardTitle>{quiz.title}</CardTitle> {/* */}
+                <CardTitle>{quiz.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 {" "}
-                {/* */}
-                <p className="text-sm text-gray-600 mb-2 line-clamp-3">
+                <p className="text-md text-gray-600 mb-2 line-clamp-3">
                   {quiz.description}
                 </p>
-                <CardDescription className="text-xs text-gray-500">
+                <CardDescription className="text-sm text-gray-500">
                   {" "}
-                  {/* */}
                   Questions: {quiz.questionCount} <br />
-                  Created: {new Date(quiz.createdAt).toLocaleDateString()}
+                  Created:{" "}
+                  {new Date(quiz.createdAt).toLocaleDateString("nl-NL", {
+                    hour12: false,
+                  })}
                 </CardDescription>
               </CardContent>
             </Card>

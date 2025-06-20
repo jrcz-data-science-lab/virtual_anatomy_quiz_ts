@@ -2,7 +2,13 @@
 
 import { JSX, useState } from "react";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 type Quiz = {
@@ -56,16 +62,23 @@ export default function QuizList({
                   <CardTitle>{quiz.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="pb-2">{quiz.description}</p>
-                  <p>Questions: {quiz.questions.length}</p>
-                  <p>
+                  <p className="text-md text-gray-600 mb-2 line-clamp-3">
+                    {quiz.description}
+                  </p>
+                  <CardDescription className="text-sm text-gray-500">
+                    Questions: {quiz.questions.length} <br />
                     Scheduled For:{" "}
                     {quiz.scheduledAt === null
                       ? "Not Scheduled"
                       : new Date(quiz.scheduledAt).toLocaleString("nl-NL", {
+                          month: "2-digit",
+                          day: "2-digit",
+                          year: "numeric",
                           hour12: false,
+                          hour: "2-digit",
+                          minute: "2-digit",
                         })}
-                  </p>
+                  </CardDescription>
                 </CardContent>
               </Card>
             </Link>
