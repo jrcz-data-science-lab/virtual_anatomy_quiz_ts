@@ -17,6 +17,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface EditQuizFormProps {
   id: string;
@@ -290,20 +301,18 @@ export default function EditQuizForm({
    * displays an error toast message and sets the error state.
    */
   const handleDeleteQuiz = async () => {
-    if (window.confirm("Are you sure you want to delete this quiz?")) {
-      setLoading(true);
-      try {
-        const response = await fetch(`/api/quizzes/${id}`, {
-          method: "DELETE",
-        });
-        if (!response.ok) throw new Error("Failed to delete quiz");
-        toast.success("Quiz deleted successfully");
-        router.push("/"); // Navigate to home
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Error deleting quiz");
-        toast.error(err instanceof Error ? err.message : "Error deleting quiz");
-        setLoading(false);
-      }
+    setLoading(true);
+    try {
+      const response = await fetch(`/api/quizzes/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) throw new Error("Failed to delete quiz");
+      toast.success("Quiz deleted successfully");
+      router.push("/");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Error deleting quiz");
+      toast.error(err instanceof Error ? err.message : "Error deleting quiz");
+      setLoading(false);
     }
   };
 
@@ -384,14 +393,32 @@ export default function EditQuizForm({
       </div>
 
       <div className="flex justify-end space-x-3 pt-4">
-        <Button
-          type="button"
-          variant="destructive"
-          onClick={handleDeleteQuiz}
-          disabled={loading}
-        >
-          Delete Quiz
-        </Button>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button type="button" variant="destructive" disabled={loading}>
+              Delete Quiz
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete this
+                quiz and all of its submission data.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction
+                className="bg-destructive text-white hover:bg-destructive/90"
+                onClick={handleDeleteQuiz}
+              >
+                Continue
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+
         <Button type="submit" disabled={loading}>
           {loading ? "Updating..." : "Update Quiz"}
         </Button>

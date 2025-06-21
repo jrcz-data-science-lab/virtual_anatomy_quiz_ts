@@ -48,6 +48,14 @@ const Navbar = (): JSX.Element => {
             Results
           </Link>
         </nav>
+
+        <div className="mr-4">
+          <p className="text-sm text-gray-400 border rounded-md px-2 py-1">
+            Press <kbd className="font-sans font-semibold">Ctrl</kbd>{" "}
+            <kbd className="font-sans font-semibold">K</kbd> to search
+          </p>
+        </div>
+
         <Avatar>
           <AvatarFallback>HZ</AvatarFallback>
         </Avatar>

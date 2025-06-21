@@ -3,6 +3,7 @@ import EditQuizForm from "@/app/components/EditQuizForm";
 import dbConnect from "@/app/lib/dbConnect";
 import { Quiz } from "@/app/models/Quiz";
 import { JSX } from "react";
+import { Separator } from "@/components/ui/separator";
 
 /**
  * Page component for editing a quiz
@@ -36,12 +37,21 @@ export default async function EditQuiz(props: {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">
-        {plainQuiz.title} -{" "}
+      <h1 className="text-3xl font-bold mb-4">{plainQuiz.title}</h1>
+      <h2 className="text-xl font-semibold mb-2">
+        Scheduled At:{" "}
         {quiz.scheduledAt === null
           ? "Not Scheduled"
-          : quiz.scheduledAt?.toLocaleString()}
-      </h1>
+          : quiz.scheduledAt?.toLocaleString("nl-NL", {
+              month: "2-digit",
+              day: "2-digit",
+              year: "numeric",
+              hour12: false,
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+      </h2>
+      <Separator className="m-4" />
       <EditQuizForm
         id={params.id}
         initialTitle={plainQuiz.title}
