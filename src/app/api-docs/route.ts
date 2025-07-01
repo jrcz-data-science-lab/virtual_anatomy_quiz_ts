@@ -433,7 +433,6 @@ const specContent = {
       Answer: {
         type: "object",
         properties: {
-          _id: { type: "string" },
           text: { type: "string" },
           isCorrect: { type: "boolean" },
         },
@@ -441,7 +440,6 @@ const specContent = {
       Question: {
         type: "object",
         properties: {
-          _id: { type: "string" },
           questionText: { type: "string" },
           type: {
             type: "string",
@@ -482,11 +480,11 @@ const specContent = {
           title: { type: "string" },
           description: { type: "string" },
           studyYear: { type: "integer" },
+          scheduledAt: { type: "string", format: "date-time" },
           questions: {
             type: "array",
             items: { $ref: "#/components/schemas/Question" },
           },
-          scheduledAt: { type: "string", format: "date-time" },
         },
       },
       SubmissionAnswer: {
