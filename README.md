@@ -14,6 +14,7 @@ To view the MongoDB -> SQL migration guide, see the [Migration Guide](https://gi
 - **Anatomical Data Catalog**: A database-driven catalog (`meshCatalogItems` and `organGroups`) defines all interactable 3D meshes and their relationships to broader anatomical groups.
 - **Quiz Submission API**: A dedicated endpoint (`/api/submissions`) for the Unreal Engine client to submit completed quiz answers in a single request.
 - **Results Dashboard**: A detailed results page for teachers to analyze quiz performance on a per-question basis with charts and response lists.
+- **API Specification & Design**: API docs have been created with Scalar, go to the `/api-docs` page to access them
 
 ## 3. Tech Stack
 
@@ -133,4 +134,9 @@ Potential future ideas for this system are:
 - Implementing a full grading system to store scores on submissions.
 - Adding user authentication and roles (e.g., Teacher, Student Admin).
 - Building a web UI for managing the Mesh Catalog and Organ Groups directly within the application (CRUD meshes and organ groups directly from this site).
-- Quiz templates
+
+"Dream features" that the nursing teachers have mentioned:
+
+- Quiz templates (reusable quizzes)
+- One-time links for quizzes for when the teachers want to select only specific students to take a quiz
+  - A teacher could be able to generate a one-time link when creating a quiz, and only students with this link would be able to take it in the UE application
