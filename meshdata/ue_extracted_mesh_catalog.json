@@ -1,0 +1,5138 @@
+[
+  {
+    "meshName": "arteries_Acromial_Branch_of_Thoraco-acromial_Artery",
+    "displayName": "Acromial Branch of Thoraco-acromial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Angular_Artery",
+    "displayName": "Angular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Cerebral_Artery",
+    "displayName": "Anterior Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Cerebral_Artery_004",
+    "displayName": "Anterior Cerebral Artery 004",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Cerebral_Artery_005",
+    "displayName": "Anterior Cerebral Artery 005",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_cerebral_artery_grp1",
+    "displayName": "Anterior Cerebral Artery Grp1",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_cerebral_artery_grp1_001",
+    "displayName": "Anterior Cerebral Artery Grp1 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_cerebral_artery_grp1_002",
+    "displayName": "Anterior Cerebral Artery Grp1 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Circumflex_Humeral_Artery",
+    "displayName": "Anterior Circumflex Humeral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Communicating_Artery",
+    "displayName": "Anterior Communicating Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Glandular_Branch_of_Superior_xxxx",
+    "displayName": "Anterior Glandular Branch of Superior Xxxx",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Inferior_Cerebellar_Artery",
+    "displayName": "Anterior Inferior Cerebellar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Inferior_Pancreaticoduodenal_Artery",
+    "displayName": "Anterior Inferior Pancreaticoduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Interosseus_Artery",
+    "displayName": "Anterior Interosseus Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Lateral_Malleolar_Artery",
+    "displayName": "Anterior Lateral Malleolar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Medial_Malleolar_Artery",
+    "displayName": "Anterior Medial Malleolar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Spinal_Artery",
+    "displayName": "Anterior Spinal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Superior_Pancreaticoduodenal_Artery",
+    "displayName": "Anterior Superior Pancreaticoduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Temporal_Artery",
+    "displayName": "Anterior Temporal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Tibial_Artery",
+    "displayName": "Anterior Tibial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Tibial_Recurrent_Artery",
+    "displayName": "Anterior Tibial Recurrent Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Anterior_Tympanic_Artery",
+    "displayName": "Anterior Tympanic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Aorta_Arch_and_Descending_Aorta",
+    "displayName": "Aorta Arch And Descending Aorta",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Appendicular_Artery",
+    "displayName": "Appendicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Arcuate_Artery",
+    "displayName": "Arcuate Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Arteries_Renal_and_Adrenal",
+    "displayName": "Arteries Renal And Adrenal",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Arteries_Renal_and_Adrenal_001",
+    "displayName": "Arteries Renal And Adrenal 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Artery_of_Central_Sulcus",
+    "displayName": "Artery of Central Sulcus",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Artery_of_Pterygoid_Canal",
+    "displayName": "Artery of Pterygoid Canal",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Articular_Branch_of_Descending_Genicular_Artery",
+    "displayName": "Articular Branch of Descending Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ascending_Branch_of_Lateral_Circumflex_Femoral_Artery",
+    "displayName": "Ascending Branch of Lateral Circumflex Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ascending_Pharyngeal_Artery",
+    "displayName": "Ascending Pharyngeal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Brachial_Artery",
+    "displayName": "Brachial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Brachiocephalic_Trunk",
+    "displayName": "Brachiocephalic Trunk",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Bronchial_Arteries",
+    "displayName": "Bronchial Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Bronchial_Arteries_001",
+    "displayName": "Bronchial Arteries 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cavernous_Branch_of_Internal_Carotid_Artery_001",
+    "displayName": "Cavernous Branch of Internal Carotid Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cavernous_Branch_of_Internal_Carotid_Artery_003",
+    "displayName": "Cavernous Branch of Internal Carotid Artery 003",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cavernous_branch_of_right_internal_",
+    "displayName": "Cavernous Branch of Right Internal",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cavernous_Branch_of_right_internal_caro",
+    "displayName": "Cavernous Branch of Right Internal Caro",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cavernous_branch_of_right_internal_caro_001",
+    "displayName": "Cavernous Branch of Right Internal Caro 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Celiac_Trunk",
+    "displayName": "Celiac Trunk",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Central_Retinal_Artery",
+    "displayName": "Central Retinal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Circumflex_Fibular_Branch_of_Posterior_Tibial_Artery",
+    "displayName": "Circumflex Fibular Branch of Posterior Tibial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Clavicular_Branch_of_Thoraco-acromial_Artery",
+    "displayName": "Clavicular Branch of Thoraco-acromial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Carotid_Artery",
+    "displayName": "Common Carotid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Carotid_Artery_L",
+    "displayName": "Common Carotid Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Hepatic_Artery",
+    "displayName": "Common Hepatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Iliac_Artery_L",
+    "displayName": "Common Iliac Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Iliac_Artery_R",
+    "displayName": "Common Iliac Artery (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Common_Interosseus_Artery",
+    "displayName": "Common Interosseus Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Communicating_Branch_of_Fibular_Artery",
+    "displayName": "Communicating Branch of Fibular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Costocervical_Trunk",
+    "displayName": "Costocervical Trunk",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Costocervical_Trunk_L",
+    "displayName": "Costocervical Trunk (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cricothyroid_Artery",
+    "displayName": "Cricothyroid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Cystic_Artery",
+    "displayName": "Cystic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Artery_of_Thigh",
+    "displayName": "Deep Artery of Thigh",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Auricular_Artery",
+    "displayName": "Deep Auricular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Branch_of_Medial_Plantar_Artery",
+    "displayName": "Deep Branch of Medial Plantar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Branch_of_Superior_Gluteal_Artery",
+    "displayName": "Deep Branch of Superior Gluteal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Branch_of_Transverse_Cervical_Artery",
+    "displayName": "Deep Branch of Transverse Cervical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Circumflex_Iliac_Artery",
+    "displayName": "Deep Circumflex Iliac Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_External_Pudendal_Artery",
+    "displayName": "Deep External Pudendal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Palmar_Arch",
+    "displayName": "Deep Palmar Arch",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Plantar_Arch",
+    "displayName": "Deep Plantar Arch",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deep_Plantar_Artery",
+    "displayName": "Deep Plantar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Deltoid_Branch_of_Thoraco-acromial_Artery",
+    "displayName": "Deltoid Branch of Thoraco-acromial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Descending_Branch_of_Lateral_Circumflex_Femoral_Artery",
+    "displayName": "Descending Branch of Lateral Circumflex Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Descending_Genicular_Artery",
+    "displayName": "Descending Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Carpal_Artery",
+    "displayName": "Dorsal Carpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Carpal_Network",
+    "displayName": "Dorsal Carpal Network",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Digital_Arteries",
+    "displayName": "Dorsal Digital Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Digital_Arteries_001",
+    "displayName": "Dorsal Digital Arteries 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Metatarsal_Arteries",
+    "displayName": "Dorsal Metatarsal Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Pancreatic_Artery",
+    "displayName": "Dorsal Pancreatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Dorsal_Pedis_Artery",
+    "displayName": "Dorsal Pedis Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Esophageal_Arteries",
+    "displayName": "Esophageal Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_External_Iliac_Artery",
+    "displayName": "External Iliac Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Femoral_Artery",
+    "displayName": "Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Fibular_Artery",
+    "displayName": "Fibular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Fifth_Dorsal_Metacarpal_Artery",
+    "displayName": "Fifth Dorsal Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_First_Common_Palmar_Digital_Artery",
+    "displayName": "First Common Palmar Digital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_First_Dorsal_Metacarpal_Artery",
+    "displayName": "First Dorsal Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_First_Palmar_Metacarpal_Artery",
+    "displayName": "First Palmar Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_First_Perforating_Artery_from_Deep_Artery_of_Thigh",
+    "displayName": "First Perforating Artery From Deep Artery of Thigh",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1668_BP49146_FMA50369_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "FJ1668 BP49146 FMA50369 Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1669_BP49146_FMA50369_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "FJ1669 BP49146 FMA50369 Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1670_BP49146_FMA50369_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "FJ1670 BP49146 FMA50369 Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1685_BP49146_FMA50369_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "FJ1685 BP49146 FMA50369 Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1686_BP49146_FMA50369_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "FJ1686 BP49146 FMA50369 Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1716_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ1716 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1717_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ1717 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1724_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ1724 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ1729_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ1729 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ5135_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ5135 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_FJ5171_BP49146_FMA50369_Insular_part_of_right_middle_cerebr_001",
+    "displayName": "FJ5171 BP49146 FMA50369 Insular Part of Right Middle Cerebr 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Fourth_Dorsal_Metacarpal_Artery",
+    "displayName": "Fourth Dorsal Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Gastroduodenal_Artery",
+    "displayName": "Gastroduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Genicular_Arterial_Network",
+    "displayName": "Genicular Arterial Network",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Great_Pancreatic_Artery",
+    "displayName": "Great Pancreatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ileocolic_Artery",
+    "displayName": "Ileocolic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Alveolar_Artery",
+    "displayName": "Inferior Alveolar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Alveolar_Artery_002",
+    "displayName": "Inferior Alveolar Artery 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Epigastric_Artery",
+    "displayName": "Inferior Epigastric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Gluteal_Artery",
+    "displayName": "Inferior Gluteal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Labial_Artery",
+    "displayName": "Inferior Labial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Lateral_Genicular_Artery",
+    "displayName": "Inferior Lateral Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Medial_Genicular_Artery",
+    "displayName": "Inferior Medial Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Mesenteric_Artery",
+    "displayName": "Inferior Mesenteric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Ulnar_Collateral_Artery",
+    "displayName": "Inferior Ulnar Collateral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Inferior_Vesical_Artery",
+    "displayName": "Inferior Vesical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Infrahyoid_Artery",
+    "displayName": "Infrahyoid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Insular_Part_of_Middle_Cerebral_Artery",
+    "displayName": "Insular Part of Middle Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Insular_part_of_right_middle_cerebral_a",
+    "displayName": "Insular Part of Right Middle Cerebral A",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_10_L",
+    "displayName": "Intercostal Artery 10 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_10_R",
+    "displayName": "Intercostal Artery 10 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_11_L",
+    "displayName": "Intercostal Artery 11 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_11_R",
+    "displayName": "Intercostal Artery 11 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_1_L",
+    "displayName": "Intercostal Artery 1 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_2_L",
+    "displayName": "Intercostal Artery 2 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_2_R",
+    "displayName": "Intercostal Artery 2 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_3_L",
+    "displayName": "Intercostal Artery 3 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_3_R",
+    "displayName": "Intercostal Artery 3 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_4_L",
+    "displayName": "Intercostal Artery 4 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_4_R",
+    "displayName": "Intercostal Artery 4 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_5_L",
+    "displayName": "Intercostal Artery 5 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_5_R",
+    "displayName": "Intercostal Artery 5 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_6_L",
+    "displayName": "Intercostal Artery 6 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_6_R",
+    "displayName": "Intercostal Artery 6 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_7_L",
+    "displayName": "Intercostal Artery 7 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_7_R",
+    "displayName": "Intercostal Artery 7 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_8_L",
+    "displayName": "Intercostal Artery 8 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_8_R",
+    "displayName": "Intercostal Artery 8 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_9_L",
+    "displayName": "Intercostal Artery 9 (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Intercostal_Artery_9_R",
+    "displayName": "Intercostal Artery 9 (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Internal_Iliac_Artery",
+    "displayName": "Internal Iliac Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Internal_Pudendal_Artery",
+    "displayName": "Internal Pudendal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Internal_Thoracic_Artery_L",
+    "displayName": "Internal Thoracic Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Internal_Thoracic_Artery_R",
+    "displayName": "Internal Thoracic Artery (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Jejunal_and_Ileal_Arteries",
+    "displayName": "Jejunal And Ileal Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Branch_of_Pontine_Artery",
+    "displayName": "Lateral Branch of Pontine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Calcaneal_Branch_of_Fibular_Artery",
+    "displayName": "Lateral Calcaneal Branch of Fibular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Circumfle_Femoral_Artery",
+    "displayName": "Lateral Circumfle Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Glandular_Branch_of_Superior_Thyroid_Artery",
+    "displayName": "Lateral Glandular Branch of Superior Thyroid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Nasal_Artery",
+    "displayName": "Lateral Nasal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Plantar_Artery",
+    "displayName": "Lateral Plantar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Sacral_Arteries",
+    "displayName": "Lateral Sacral Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Tarsal_Artery",
+    "displayName": "Lateral Tarsal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lateral_Thoracic_Artery",
+    "displayName": "Lateral Thoracic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Left_Colic_Artery",
+    "displayName": "Left Colic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Left_Gastric_Artery",
+    "displayName": "Left Gastric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Left_Gastro-Epiploic_Artery",
+    "displayName": "Left Gastro-Epiploic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Left_Hepatic_Artery",
+    "displayName": "Left Hepatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Lesser_Palatine_Artery",
+    "displayName": "Lesser Palatine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Marginal_Artery__of_Bowel_",
+    "displayName": "Marginal Artery of Bowel",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Branch_of_Pontine_Artery",
+    "displayName": "Medial Branch of Pontine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Calcaneal_Branch_of_Posterior_Tibial_Artery",
+    "displayName": "Medial Calcaneal Branch of Posterior Tibial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Circumflex_Femoral_Artery",
+    "displayName": "Medial Circumflex Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Palpebral_Artery",
+    "displayName": "Medial Palpebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Palpebral_Artery_001",
+    "displayName": "Medial Palpebral Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Palpebral_Artery_002",
+    "displayName": "Medial Palpebral Artery 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Plantar_Artery",
+    "displayName": "Medial Plantar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Medial_Tarsal_Artery",
+    "displayName": "Medial Tarsal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Middle_Cerebral_Artery",
+    "displayName": "Middle Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Middle_Colic_Artery",
+    "displayName": "Middle Colic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Middle_Collateral_Artery",
+    "displayName": "Middle Collateral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Middle_Rectal_Artery",
+    "displayName": "Middle Rectal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Middle_Temporal_Branch_of_Middle_xxxx",
+    "displayName": "Middle Temporal Branch of Middle Xxxx",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Musculophrenic_Artery_L",
+    "displayName": "Musculophrenic Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Musculophrenic_Artery_R",
+    "displayName": "Musculophrenic Artery (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Obturator_Artery",
+    "displayName": "Obturator Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ophthalmic_Artery",
+    "displayName": "Ophthalmic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ophthalmic_Artery_001",
+    "displayName": "Ophthalmic Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ophthalmic_Artery_002",
+    "displayName": "Ophthalmic Artery 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ophthalmic_artery_grp1_001",
+    "displayName": "Ophthalmic Artery Grp1 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ophthalmic_artery_grp1_002",
+    "displayName": "Ophthalmic Artery Grp1 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Orbital_Branch_of_Middle_Meningeal_Artery",
+    "displayName": "Orbital Branch of Middle Meningeal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Palmar_Digital_Artery",
+    "displayName": "Palmar Digital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Pancreatic_Arterial_Anastomoses",
+    "displayName": "Pancreatic Arterial Anastomoses",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Pancreatic_Branches_of_Splenic_Artery",
+    "displayName": "Pancreatic Branches of Splenic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Paracentral_Branch_of_Callosomarginal_Artery",
+    "displayName": "Paracentral Branch of Callosomarginal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Pectoral_Branch_of_Thoraco-acromial_Artery",
+    "displayName": "Pectoral Branch of Thoraco-acromial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Perforating_Branch_of_Fibular_Artery",
+    "displayName": "Perforating Branch of Fibular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Perforating_Branches",
+    "displayName": "Perforating Branches",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Pericallosal_Artery",
+    "displayName": "Pericallosal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Plantar_Digital_Arteries",
+    "displayName": "Plantar Digital Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Plantar_Metatarsal_Arteries",
+    "displayName": "Plantar Metatarsal Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Polar_Frontal_Artery",
+    "displayName": "Polar Frontal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Popliteal_Artery",
+    "displayName": "Popliteal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Postcommunicating_Part_of_Posterior",
+    "displayName": "Postcommunicating Part of Posterior",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Postcommunicating_Part_of_Posterior_Cerebral_Artery",
+    "displayName": "Postcommunicating Part of Posterior Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Auricular_Artery_001",
+    "displayName": "Posterior Auricular Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Circumflex_Humeral_Artery",
+    "displayName": "Posterior Circumflex Humeral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Communicating_Artery",
+    "displayName": "Posterior Communicating Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Gastric_Artery",
+    "displayName": "Posterior Gastric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Glandular_Branch_of_Superior_Thyroid_Artery",
+    "displayName": "Posterior Glandular Branch of Superior Thyroid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Inferior_Cerebellar_Artery",
+    "displayName": "Posterior Inferior Cerebellar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Inferior_Pancreaticoduodenal_Artery",
+    "displayName": "Posterior Inferior Pancreaticoduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Interosseus_Artery",
+    "displayName": "Posterior Interosseus Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Lateral_Malleolar_Branch_of_Fibular_Artery",
+    "displayName": "Posterior Lateral Malleolar Branch of Fibular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Medial_Malleolar_Branch_of_Posterior_Tibial_Art",
+    "displayName": "Posterior Medial Malleolar Branch of Posterior Tibial Art",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Meningeal_Artery",
+    "displayName": "Posterior Meningeal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Superior_Alveolar_Artery",
+    "displayName": "Posterior Superior Alveolar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Superior_Pancreaticoduodenal_Artery",
+    "displayName": "Posterior Superior Pancreaticoduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Posterior_Tibial_Artery",
+    "displayName": "Posterior Tibial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Precommunicating_Part_of_Posterior_Cerebral_Artery",
+    "displayName": "Precommunicating Part of Posterior Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Precommunicating_part_of_right_posterio_of_Left_thalamoperforat",
+    "displayName": "Precommunicating Part of Right Posterio of Left Thalamoperforat",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Princeps_Pollicis_Artery",
+    "displayName": "Princeps Pollicis Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Profunda_Brachii_Artery",
+    "displayName": "Profunda Brachii Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Proper_Hepatic_Artery",
+    "displayName": "Proper Hepatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Proper_Palmar_Digital_Arteries",
+    "displayName": "Proper Palmar Digital Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Proper_Palmar_Digital_Arteries_of_Thumb",
+    "displayName": "Proper Palmar Digital Arteries of Thumb",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Proper_Plantar_Digital_Artery_of_Fifth_Toe",
+    "displayName": "Proper Plantar Digital Artery of Fifth Toe",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Radial_Artery",
+    "displayName": "Radial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Radial_Collateral_Artery",
+    "displayName": "Radial Collateral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Radial_Indicis_Artery",
+    "displayName": "Radial Indicis Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Radial_Recurrent_Artery",
+    "displayName": "Radial Recurrent Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Recurrent_Interosseus_Artery",
+    "displayName": "Recurrent Interosseus Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Renal_Arteries",
+    "displayName": "Renal Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Colic_Artery",
+    "displayName": "Right Colic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Gastric_Artery",
+    "displayName": "Right Gastric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Gastro-Epiploic_Artery",
+    "displayName": "Right Gastro-Epiploic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Hepatic_Artery",
+    "displayName": "Right Hepatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Splenial_Artery",
+    "displayName": "Right Splenial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Right_Splenial_Artery_001",
+    "displayName": "Right Splenial Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Saphenous_Branch_of_Descending_Genicular_Artery",
+    "displayName": "Saphenous Branch of Descending Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Second_Common_Palmar_Digital_Artery",
+    "displayName": "Second Common Palmar Digital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Second_Dorsal_Metacarpal_Artery",
+    "displayName": "Second Dorsal Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Second_Palmar_Metacarpal_Artery",
+    "displayName": "Second Palmar Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Second_Perforating_Artery_from_Deep_Artery_of_Thigh",
+    "displayName": "Second Perforating Artery From Deep Artery of Thigh",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Short_Gastric_Arteries",
+    "displayName": "Short Gastric Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Sigmoid_Arteries",
+    "displayName": "Sigmoid Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Splenic_Artery",
+    "displayName": "Splenic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Subclavian_Artery",
+    "displayName": "Subclavian Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Subclavian_Artery_L",
+    "displayName": "Subclavian Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Sublingual_Artery",
+    "displayName": "Sublingual Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Submental_Vein___",
+    "displayName": "Submental Vein",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Subscapular_Artery",
+    "displayName": "Subscapular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Branch_of_Medial_Plantar_Artery",
+    "displayName": "Superficial Branch of Medial Plantar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Branch_of_Superior_Gluteal_Artery",
+    "displayName": "Superficial Branch of Superior Gluteal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Branch_of_Transverse_Cervical_Artery",
+    "displayName": "Superficial Branch of Transverse Cervical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Circumflex_Iliac_Artery",
+    "displayName": "Superficial Circumflex Iliac Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Circumflex_Iliac_Artery_001",
+    "displayName": "Superficial Circumflex Iliac Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Epigastric_Artery",
+    "displayName": "Superficial Epigastric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_External_Pudendal_Artery",
+    "displayName": "Superficial External Pudendal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superficial_Palmar_Arch",
+    "displayName": "Superficial Palmar Arch",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Cerebellar_Artery",
+    "displayName": "Superior Cerebellar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Epigastric_Artery_L",
+    "displayName": "Superior Epigastric Artery (L)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Epigastric_Artery_R",
+    "displayName": "Superior Epigastric Artery (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Hypophyseal_Artery",
+    "displayName": "Superior Hypophyseal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Intercostal_Artery_R",
+    "displayName": "Superior Intercostal Artery (R)",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Labial_Artery",
+    "displayName": "Superior Labial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Laryngeal_Artery",
+    "displayName": "Superior Laryngeal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Lateral_Genicular_Artery",
+    "displayName": "Superior Lateral Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Medial_Genicular_Artery",
+    "displayName": "Superior Medial Genicular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Mesenteric_Artery",
+    "displayName": "Superior Mesenteric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Rectal_Artery",
+    "displayName": "Superior Rectal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Thoracic_Artery",
+    "displayName": "Superior Thoracic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Ulnar_Collateral_Artery",
+    "displayName": "Superior Ulnar Collateral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Vesical_Artery",
+    "displayName": "Superior Vesical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Superior_Vesical_Artery_004",
+    "displayName": "Superior Vesical Artery 004",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Supraduodenal_Artery",
+    "displayName": "Supraduodenal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Suprascapular_Artery",
+    "displayName": "Suprascapular Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Supratrochlear_Artery",
+    "displayName": "Supratrochlear Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Sural_Arteries",
+    "displayName": "Sural Arteries",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Third_Common_Palmar_Digital_Artery",
+    "displayName": "Third Common Palmar Digital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Third_Dorsal_Metacarpal_Artery",
+    "displayName": "Third Dorsal Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Third_Palmar_Metacarpal_Artery",
+    "displayName": "Third Palmar Metacarpal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Third_Part_of_Lingual_Artery",
+    "displayName": "Third Part of Lingual Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Third_Perforating_Artery_from_Deep_Artery_of_Thigh",
+    "displayName": "Third Perforating Artery From Deep Artery of Thigh",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Thoracodorsal_Artery",
+    "displayName": "Thoracodorsal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Thyrocervical_Trunk",
+    "displayName": "Thyrocervical Trunk",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Tr_of_right_lateral_occipital_art_of_Right_calcarine_artery",
+    "displayName": "Tr of Right Lateral Occipital Art of Right Calcarine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Transverse__Inferior__Pancreatic_Artery",
+    "displayName": "Transverse Inferior Pancreatic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Transverse_Branch_of_Lateral_Circumflex_Femoral_Artery",
+    "displayName": "Transverse Branch of Lateral Circumflex Femoral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Transverse_Cervical_Artery",
+    "displayName": "Transverse Cervical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Anterior_Cerebral_Artery",
+    "displayName": "Trunk of Anterior Cerebral Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Anterior_Choroidal_Artery",
+    "displayName": "Trunk of Anterior Choroidal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Basilar_Artery",
+    "displayName": "Trunk of Basilar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Buccal_Artery",
+    "displayName": "Trunk of Buccal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Callosomarginal_Artery",
+    "displayName": "Trunk of Callosomarginal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Descending_Palatine_Artery",
+    "displayName": "Trunk of Descending Palatine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_External_Carotid_Artery",
+    "displayName": "Trunk of External Carotid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Facial_Artery",
+    "displayName": "Trunk of Facial Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Greater_Palatine_Artery",
+    "displayName": "Trunk of Greater Palatine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Inferior_Hypophyseal_Artery",
+    "displayName": "Trunk of Inferior Hypophyseal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Infra-orbital_Artery",
+    "displayName": "Trunk of Infra-orbital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Internal_Carotid_Artery_001",
+    "displayName": "Trunk of Internal Carotid Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Lateral_Occipital_Artery",
+    "displayName": "Trunk of Lateral Occipital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Lateral_Occipital_Artery_001",
+    "displayName": "Trunk of Lateral Occipital Artery 001",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Lingual_Artery",
+    "displayName": "Trunk of Lingual Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Masseteric_Artery",
+    "displayName": "Trunk of Masseteric Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Maxillary_Artery",
+    "displayName": "Trunk of Maxillary Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Medial_Occipital_Artery",
+    "displayName": "Trunk of Medial Occipital Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Ophthalmic_Artery",
+    "displayName": "Trunk of Ophthalmic Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Polar_Temporal_Artery",
+    "displayName": "Trunk of Polar Temporal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Pterygomeningeal_Artery",
+    "displayName": "Trunk of Pterygomeningeal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Sphenopalatine_Artery",
+    "displayName": "Trunk of Sphenopalatine Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Superior_Thyroid_Artery",
+    "displayName": "Trunk of Superior Thyroid Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Tentorial_Marginal_Branch_of_xxxx",
+    "displayName": "Trunk of Tentorial Marginal Branch of Xxxx",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Uncal_Artery",
+    "displayName": "Trunk of Uncal Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Trunk_of_Vertebral_Artery_002",
+    "displayName": "Trunk of Vertebral Artery 002",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Ulnar_Artery",
+    "displayName": "Ulnar Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "arteries_Umbilical_Artery",
+    "displayName": "Umbilical Artery",
+    "organGroupTempKeys": [
+      "ARTERIES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Atlas",
+    "displayName": "Atlas",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Axis",
+    "displayName": "Axis",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Body_of_Sternum",
+    "displayName": "Body of Sternum",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Calcaneus_L",
+    "displayName": "Calcaneus (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Calcaneus_R",
+    "displayName": "Calcaneus (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Capitate_L",
+    "displayName": "Capitate (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Capitate_R",
+    "displayName": "Capitate (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Clavicle_L",
+    "displayName": "Clavicle (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Clavicle_R",
+    "displayName": "Clavicle (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Coxal_Bone_L",
+    "displayName": "Coxal Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Coxal_Bone_R",
+    "displayName": "Coxal Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Cuboid_L",
+    "displayName": "Cuboid (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Cuboid_R",
+    "displayName": "Cuboid (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_1_L",
+    "displayName": "Distal Phalanx 1 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_1_of_the_Foot_L",
+    "displayName": "Distal Phalanx 1 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_1_of_the_Foot_R",
+    "displayName": "Distal Phalanx 1 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_1_R",
+    "displayName": "Distal Phalanx 1 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_2_L",
+    "displayName": "Distal Phalanx 2 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_2_of_the_Foot_L",
+    "displayName": "Distal Phalanx 2 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_2_of_the_Foot_R",
+    "displayName": "Distal Phalanx 2 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_2_R",
+    "displayName": "Distal Phalanx 2 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_3_L",
+    "displayName": "Distal Phalanx 3 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_3_of_the_Foot_L",
+    "displayName": "Distal Phalanx 3 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_3_of_the_Foot_R",
+    "displayName": "Distal Phalanx 3 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_3_R",
+    "displayName": "Distal Phalanx 3 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_4_L",
+    "displayName": "Distal Phalanx 4 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_4_of_the_Foot_L",
+    "displayName": "Distal Phalanx 4 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_4_of_the_Foot_R",
+    "displayName": "Distal Phalanx 4 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_4_R",
+    "displayName": "Distal Phalanx 4 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_5_L",
+    "displayName": "Distal Phalanx 5 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_5_of_the_Foot_L",
+    "displayName": "Distal Phalanx 5 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_5_of_the_Foot_R",
+    "displayName": "Distal Phalanx 5 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Distal_Phalanx_5_R",
+    "displayName": "Distal Phalanx 5 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eighth_Rib_L",
+    "displayName": "Eighth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eighth_Rib_R",
+    "displayName": "Eighth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eighth_Thoracic_Vertebra",
+    "displayName": "Eighth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eleventh_Rib_L",
+    "displayName": "Eleventh Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eleventh_Rib_R",
+    "displayName": "Eleventh Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Eleventh_Thoracic_Vertebra",
+    "displayName": "Eleventh Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ethmoid_Bone",
+    "displayName": "Ethmoid Bone",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Femur_L",
+    "displayName": "Femur (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Femur_R",
+    "displayName": "Femur (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fibula_L",
+    "displayName": "Fibula (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fibula_R",
+    "displayName": "Fibula (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fifth_Cervical_Vertebra",
+    "displayName": "Fifth Cervical Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fifth_Lumbar_Vertebra",
+    "displayName": "Fifth Lumbar Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fifth_Rib_L",
+    "displayName": "Fifth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fifth_Rib_R",
+    "displayName": "Fifth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fifth_Thoracic_Vertebra",
+    "displayName": "Fifth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_First_Lumbar_Vertebra",
+    "displayName": "First Lumbar Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_First_Rib_L",
+    "displayName": "First Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_First_Rib_R",
+    "displayName": "First Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_First_Thoracic_Vertebra",
+    "displayName": "First Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fourth_Cervical_Vertebra",
+    "displayName": "Fourth Cervical Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fourth_Lumbar_Vertebra",
+    "displayName": "Fourth Lumbar Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fourth_Rib_L",
+    "displayName": "Fourth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fourth_Rib_R",
+    "displayName": "Fourth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Fourth_Thoracic_Vertebra",
+    "displayName": "Fourth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Frontal_Bone",
+    "displayName": "Frontal Bone",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Hamate_L",
+    "displayName": "Hamate (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Hamate_R",
+    "displayName": "Hamate (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Humerus_L",
+    "displayName": "Humerus (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Humerus_R",
+    "displayName": "Humerus (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Hyoid",
+    "displayName": "Hyoid",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Intermediate_Cuneiform_L",
+    "displayName": "Intermediate Cuneiform (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Intermediate_Cuneiform_R",
+    "displayName": "Intermediate Cuneiform (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lacrimal_Bone_L",
+    "displayName": "Lacrimal Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lacrimal_Bone_R",
+    "displayName": "Lacrimal Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lateral_Cuneiform_L",
+    "displayName": "Lateral Cuneiform (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lateral_Cuneiform_R",
+    "displayName": "Lateral Cuneiform (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lunate_L",
+    "displayName": "Lunate (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Lunate_R",
+    "displayName": "Lunate (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Mandible",
+    "displayName": "Mandible",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Manubrium",
+    "displayName": "Manubrium",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Maxilla_L",
+    "displayName": "Maxilla (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Maxilla_R",
+    "displayName": "Maxilla (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Medial_Cuneiform_L",
+    "displayName": "Medial Cuneiform (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Medial_Cuneiform_R",
+    "displayName": "Medial Cuneiform (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_1_L",
+    "displayName": "Metacarpal 1 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_1_R",
+    "displayName": "Metacarpal 1 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_2_L",
+    "displayName": "Metacarpal 2 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_2_R",
+    "displayName": "Metacarpal 2 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_3_L",
+    "displayName": "Metacarpal 3 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_3_R",
+    "displayName": "Metacarpal 3 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_4_L",
+    "displayName": "Metacarpal 4 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_4_R",
+    "displayName": "Metacarpal 4 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_5_L",
+    "displayName": "Metacarpal 5 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metacarpal_5_R",
+    "displayName": "Metacarpal 5 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_1_L",
+    "displayName": "Metatarsal 1 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_1_R",
+    "displayName": "Metatarsal 1 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_2_L",
+    "displayName": "Metatarsal 2 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_2_R",
+    "displayName": "Metatarsal 2 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_3_L",
+    "displayName": "Metatarsal 3 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_3_R",
+    "displayName": "Metatarsal 3 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_4_L",
+    "displayName": "Metatarsal 4 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_4_R",
+    "displayName": "Metatarsal 4 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_5_L",
+    "displayName": "Metatarsal 5 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Metatarsal_5_R",
+    "displayName": "Metatarsal 5 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_2_L",
+    "displayName": "Middle Phalanx 2 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_2_of_the_Foot_L",
+    "displayName": "Middle Phalanx 2 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_2_of_the_Foot_R",
+    "displayName": "Middle Phalanx 2 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_2_R",
+    "displayName": "Middle Phalanx 2 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_3_L",
+    "displayName": "Middle Phalanx 3 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_3_of_the_Foot_L",
+    "displayName": "Middle Phalanx 3 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_3_of_the_Foot_R",
+    "displayName": "Middle Phalanx 3 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_3_R",
+    "displayName": "Middle Phalanx 3 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_4_L",
+    "displayName": "Middle Phalanx 4 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_4_of_the_Foot_L",
+    "displayName": "Middle Phalanx 4 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_4_of_the_Foot_R",
+    "displayName": "Middle Phalanx 4 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_4_R",
+    "displayName": "Middle Phalanx 4 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_5_L",
+    "displayName": "Middle Phalanx 5 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_5_of_the_Foot_L",
+    "displayName": "Middle Phalanx 5 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_5_of_the_Foot_R",
+    "displayName": "Middle Phalanx 5 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Middle_Phalanx_5_R_001",
+    "displayName": "Middle Phalanx 5 (R) 001",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Nasal_Bone_L",
+    "displayName": "Nasal Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Nasal_Bone_R",
+    "displayName": "Nasal Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Navicular_Bone_L",
+    "displayName": "Navicular Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Navicular_Bone_R",
+    "displayName": "Navicular Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ninth_Rib_L",
+    "displayName": "Ninth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ninth_Rib_R",
+    "displayName": "Ninth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ninth_Thoracic_Vertebra",
+    "displayName": "Ninth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Occipital_Bone",
+    "displayName": "Occipital Bone",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Palatine_Bone_L",
+    "displayName": "Palatine Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Palatine_Bone_R",
+    "displayName": "Palatine Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Parietal_Bone_L",
+    "displayName": "Parietal Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Parietal_Bone_R",
+    "displayName": "Parietal Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Patella_L",
+    "displayName": "Patella (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Patella_R",
+    "displayName": "Patella (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Pisiform_L",
+    "displayName": "Pisiform (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Pisiform_R",
+    "displayName": "Pisiform (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_1_L",
+    "displayName": "Proximal Phalanx 1 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_1_of_the_Foot_L",
+    "displayName": "Proximal Phalanx 1 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_1_of_the_Foot_R",
+    "displayName": "Proximal Phalanx 1 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_1_R",
+    "displayName": "Proximal Phalanx 1 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_2_L",
+    "displayName": "Proximal Phalanx 2 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_2_of_the_Foot_L",
+    "displayName": "Proximal Phalanx 2 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_2_of_the_Foot_R",
+    "displayName": "Proximal Phalanx 2 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_2_R",
+    "displayName": "Proximal Phalanx 2 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_3_L",
+    "displayName": "Proximal Phalanx 3 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_3_of_the_Foot_L",
+    "displayName": "Proximal Phalanx 3 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_3_of_the_Foot_R",
+    "displayName": "Proximal Phalanx 3 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_3_R",
+    "displayName": "Proximal Phalanx 3 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_4_L",
+    "displayName": "Proximal Phalanx 4 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_4_of_the_Foot_L",
+    "displayName": "Proximal Phalanx 4 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_4_of_the_Foot_R",
+    "displayName": "Proximal Phalanx 4 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_4_R",
+    "displayName": "Proximal Phalanx 4 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_5_L",
+    "displayName": "Proximal Phalanx 5 (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_5_of_the_Foot_L",
+    "displayName": "Proximal Phalanx 5 of the Foot (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_5_of_the_Foot_R",
+    "displayName": "Proximal Phalanx 5 of the Foot (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Proximal_Phalanx_5_R",
+    "displayName": "Proximal Phalanx 5 (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Radius_L",
+    "displayName": "Radius (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Radius_R",
+    "displayName": "Radius (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sacrum_and_Coccygis",
+    "displayName": "Sacrum And Coccygis",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Scaphoid_L",
+    "displayName": "Scaphoid (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Scaphoid_R",
+    "displayName": "Scaphoid (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Scapula_L",
+    "displayName": "Scapula (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Scapula_R",
+    "displayName": "Scapula (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Second_Lumbar_Vertebra",
+    "displayName": "Second Lumbar Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Second_Rib_L",
+    "displayName": "Second Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Second_Rib_R",
+    "displayName": "Second Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Second_Thoracic_Vertebra",
+    "displayName": "Second Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Seventh_Cervical_Vertebra",
+    "displayName": "Seventh Cervical Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Seventh_Rib_L",
+    "displayName": "Seventh Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Seventh_Rib_R",
+    "displayName": "Seventh Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Seventh_Thoracic_Vertebra",
+    "displayName": "Seventh Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sixth_Cervical_Vertebra",
+    "displayName": "Sixth Cervical Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sixth_Rib_L",
+    "displayName": "Sixth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sixth_Rib_R",
+    "displayName": "Sixth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sixth_Thoracic_Vertebra",
+    "displayName": "Sixth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Sphenoid_Bone",
+    "displayName": "Sphenoid Bone",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Talus_L",
+    "displayName": "Talus (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Talus_R",
+    "displayName": "Talus (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Temporal_Bone_L",
+    "displayName": "Temporal Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Temporal_Bone_R",
+    "displayName": "Temporal Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Tenth_Rib_L",
+    "displayName": "Tenth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Tenth_Rib_R",
+    "displayName": "Tenth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Tenth_Thoracic_Vertebra",
+    "displayName": "Tenth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Third_Cervical_Vertebra",
+    "displayName": "Third Cervical Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Third_Lumbar_Vertebra",
+    "displayName": "Third Lumbar Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Third_Rib_L",
+    "displayName": "Third Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Third_Rib_R",
+    "displayName": "Third Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Third_Thoracic_Vertebra",
+    "displayName": "Third Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Tibia_L",
+    "displayName": "Tibia (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Tibia_R",
+    "displayName": "Tibia (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Trapezium_L",
+    "displayName": "Trapezium (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Trapezium_R",
+    "displayName": "Trapezium (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Trapezoid_L",
+    "displayName": "Trapezoid (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Trapezoid_R",
+    "displayName": "Trapezoid (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Triquetral_L",
+    "displayName": "Triquetral (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Triquetral_R",
+    "displayName": "Triquetral (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Twelfth_Rib_L",
+    "displayName": "Twelfth Rib (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Twelfth_Rib_R",
+    "displayName": "Twelfth Rib (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Twelfth_Thoracic_Vertebra",
+    "displayName": "Twelfth Thoracic Vertebra",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ulna_L",
+    "displayName": "Ulna (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Ulna_R",
+    "displayName": "Ulna (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Vomer",
+    "displayName": "Vomer",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Xiphoid_Process",
+    "displayName": "Xiphoid Process",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Zygomatic_Bone_L",
+    "displayName": "Zygomatic Bone (L)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "bones_Zygomatic_Bone_R",
+    "displayName": "Zygomatic Bone (R)",
+    "organGroupTempKeys": [
+      "BONES_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Annulus_Fibrosus_of_Aortic_Valve",
+    "displayName": "Annulus Fibrosus of Aortic Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Annulus_Fibrosus_of_Mitral_Valve",
+    "displayName": "Annulus Fibrosus of Mitral Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Annulus_Fibrosus_of_Pulmonary_Valve",
+    "displayName": "Annulus Fibrosus of Pulmonary Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Annulus_Fibrosus_of_Tricuspid_Valve",
+    "displayName": "Annulus Fibrosus of Tricuspid Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Atrial_Branch_of_Right_Coronary_Artery",
+    "displayName": "Anterior Atrial Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Cardiac_Vein",
+    "displayName": "Anterior Cardiac Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Cusp_of_Pulmonar_Valve",
+    "displayName": "Anterior Cusp of Pulmonar Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Division_of_Left_Branch_of_Atrioventricular_Bundle",
+    "displayName": "Anterior Division of Left Branch of Atrioventricular Bundle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Division_ofSeptal_Branch_of_Atrioventricular_Bundle",
+    "displayName": "Anterior Division OfSeptal Branch of Atrioventricular Bundle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Internodal_Tract",
+    "displayName": "Anterior Internodal Tract",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Leaflet_of_Mitral_Valve",
+    "displayName": "Anterior Leaflet of Mitral Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Leaflet_of_Tricuspid_Valve",
+    "displayName": "Anterior Leaflet of Tricuspid Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Papillary_Muscle_of_Left_Ventricle",
+    "displayName": "Anterior Papillary Muscle of Left Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Papillary_Muscle_of_Right_Ventricle",
+    "displayName": "Anterior Papillary Muscle of Right Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Anterior_Septal_Branch_of_Anterior_Interventricular_Branch",
+    "displayName": "Anterior Septal Branch of Anterior Interventricular Branch",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Aorta",
+    "displayName": "Aorta",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Aortic_Root",
+    "displayName": "Aortic Root",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Atrioventricular_Bundle",
+    "displayName": "Atrioventricular Bundle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Atrioventricular_Node",
+    "displayName": "Atrioventricular Node",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Atrioventricular_Node_Branch_of_Right_Coronary_Artery",
+    "displayName": "Atrioventricular Node Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Chordae_Tendinae_of_Mitral_Valve",
+    "displayName": "Chordae Tendinae of Mitral Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Chordae_Tendinae_of_Tricuspid_Valve",
+    "displayName": "Chordae Tendinae of Tricuspid Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Conus_Branch_of_Right_Coronary_Artery",
+    "displayName": "Conus Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Coronary_Sinus",
+    "displayName": "Coronary Sinus",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Crista_supraventricularis",
+    "displayName": "Crista Supraventricularis",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Crista_Terminalis",
+    "displayName": "Crista Terminalis",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Diagonal_Branch_of_Anterior_Interventricular_Branch",
+    "displayName": "Diagonal Branch of Anterior Interventricular Branch",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_First_Anterior_Ventricular_Branch_of_Right_Coronary_Artery",
+    "displayName": "First Anterior Ventricular Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_First_Post__Ventricular_Branch_of_Circumflex_Coronary_Artery",
+    "displayName": "First Post Ventricular Branch of Circumflex Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_First_Posterior_Ventricular_Branch_of_Right_Coronary_Artery",
+    "displayName": "First Posterior Ventricular Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Great_Cardiac_Vein",
+    "displayName": "Great Cardiac Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interatrial_Septum__Septum_Primum_",
+    "displayName": "Interatrial Septum Septum Primum",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interatrial_Septum__Septum_Secundum_",
+    "displayName": "Interatrial Septum Septum Secundum",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interleaflet_Triangle",
+    "displayName": "Interleaflet Triangle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interleaflet_Triangle_001",
+    "displayName": "Interleaflet Triangle 001",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interventricular_Septum_-_Membranous_Part",
+    "displayName": "Interventricular Septum - Membranous Part",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Interventricular_Septum_-_Muscular_Part",
+    "displayName": "Interventricular Septum - Muscular Part",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Atrium",
+    "displayName": "Left Atrium",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Coronary_Cusp_of_Aortic_Valve",
+    "displayName": "Left Coronary Cusp of Aortic Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Cusp_of_Pulmonary_Valve",
+    "displayName": "Left Cusp of Pulmonary Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Fibrous_Trigone",
+    "displayName": "Left Fibrous Trigone",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Marginal_Artery",
+    "displayName": "Left Marginal Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Marginal_Vein",
+    "displayName": "Left Marginal Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Left_Ventricle",
+    "displayName": "Left Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Marginal_Branch_of_Right_Coronary_Artery",
+    "displayName": "Marginal Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Mball",
+    "displayName": "Mball",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Middle_Cardiac_Vein",
+    "displayName": "Middle Cardiac Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Middle_Internodal_Tract",
+    "displayName": "Middle Internodal Tract",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Non-Coronary_Cusp_of_Aortic_Valve",
+    "displayName": "Non-Coronary Cusp of Aortic Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Pectinate_Muscle_of_Right_Atrium",
+    "displayName": "Pectinate Muscle of Right Atrium",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Division_of_Left_Branch_of_Atrioventricular_Bundle",
+    "displayName": "Posterior Division of Left Branch of Atrioventricular Bundle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Internodal_Tract",
+    "displayName": "Posterior Internodal Tract",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Interventricular_Branch_of_Circumflex_Coronary_Artery",
+    "displayName": "Posterior Interventricular Branch of Circumflex Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Leaflet_of_Mitral_Valve",
+    "displayName": "Posterior Leaflet of Mitral Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Leaflet_of_Tricuspid_Valve",
+    "displayName": "Posterior Leaflet of Tricuspid Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Papillary_Muscle_of_Left_Ventricle",
+    "displayName": "Posterior Papillary Muscle of Left Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Papillary_Muscle_of_Right_Ventricle",
+    "displayName": "Posterior Papillary Muscle of Right Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Posterior_Vein_of_Left_Ventricle",
+    "displayName": "Posterior Vein of Left Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Pulmonary_Trunk",
+    "displayName": "Pulmonary Trunk",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Atrium",
+    "displayName": "Right Atrium",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Branch_of_Atrioventricular_Bundle",
+    "displayName": "Right Branch of Atrioventricular Bundle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Coronary_Cusp_of_Aortic_Valve",
+    "displayName": "Right Coronary Cusp of Aortic Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Cusp_of_Pulmonary_Valve",
+    "displayName": "Right Cusp of Pulmonary Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Fibrous_Trigone",
+    "displayName": "Right Fibrous Trigone",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Marginal_Vein",
+    "displayName": "Right Marginal Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Right_Ventricle_001",
+    "displayName": "Right Ventricle 001",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Second_Left_Anterior_Branch_of_Anterior_Interventricular_Branch",
+    "displayName": "Second Left Anterior Branch of Anterior Interventricular Branch",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Septal_Leaflet_of_Tricuspid_Valve",
+    "displayName": "Septal Leaflet of Tricuspid Valve",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Septal_Papillary_Muscle_of_Right_Ventricle",
+    "displayName": "Septal Papillary Muscle of Right Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Septomarginal_Trabeculation",
+    "displayName": "Septomarginal Trabeculation",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Septomarginal_Trabeculation__Moderator_Band_",
+    "displayName": "Septomarginal Trabeculation Moderator Band",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Sinoatrial_nodal_branch_of_Right_Coronary_Artery",
+    "displayName": "Sinoatrial Nodal Branch of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Sinoatrial_Node",
+    "displayName": "Sinoatrial Node",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Small_Cardiac_Vein",
+    "displayName": "Small Cardiac Vein",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Tendon_of_Todaro",
+    "displayName": "Tendon of Todaro",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Third_Left_Anterior_Branch_of_Anterior_Interventricular_Branch",
+    "displayName": "Third Left Anterior Branch of Anterior Interventricular Branch",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trabecula_Carnea_of_Left_Ventricle",
+    "displayName": "Trabecula Carnea of Left Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trabecula_Carnea_of_Right_Ventricle",
+    "displayName": "Trabecula Carnea of Right Ventricle",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trunk_of_Ant__Interventricular_Branch_of_Left_Coronary_Artery",
+    "displayName": "Trunk of Ant Interventricular Branch of Left Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trunk_of_Circumflex_Branch_of_Left_Coronary_Artery",
+    "displayName": "Trunk of Circumflex Branch of Left Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trunk_of_Left_Coronary_Artery",
+    "displayName": "Trunk of Left Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Trunk_of_Right_Coronary_Artery",
+    "displayName": "Trunk of Right Coronary Artery",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Valve_of_Coronary_Sinus",
+    "displayName": "Valve of Coronary Sinus",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "hearth_Valve_of_Inferior_Vena_Cava",
+    "displayName": "Valve of Inferior Vena Cava",
+    "organGroupTempKeys": [
+      "HEARTH_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Anterior_Basal_Segment_L",
+    "displayName": "Anterior Basal Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Anterior_Basal_Segment_R",
+    "displayName": "Anterior Basal Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Anterior_Segment_L",
+    "displayName": "Anterior Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Anterior_Segment_R",
+    "displayName": "Anterior Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Apical_Segment_L",
+    "displayName": "Apical Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Apical_Segment_R",
+    "displayName": "Apical Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Apicoposterior_Segment_L",
+    "displayName": "Apicoposterior Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Inferior_Lingular_Segment_L",
+    "displayName": "Inferior Lingular Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Lateral_Basal_Segment_L",
+    "displayName": "Lateral Basal Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Lateral_Basal_Segment_R",
+    "displayName": "Lateral Basal Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Lateral_Sement_R",
+    "displayName": "Lateral Sement (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Medial_Segment_R",
+    "displayName": "Medial Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Posterior_Basal_Segment_L",
+    "displayName": "Posterior Basal Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Posterior_Basal_Segment_R",
+    "displayName": "Posterior Basal Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Posterior_Segment_R",
+    "displayName": "Posterior Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Superior_Lingular_L",
+    "displayName": "Superior Lingular (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Superior_Segment_L",
+    "displayName": "Superior Segment (L)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "lungs_Superior_Segment_R",
+    "displayName": "Superior Segment (R)",
+    "organGroupTempKeys": [
+      "LUNGS_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Vermiform_Appendix",
+    "displayName": "Vermiform Appendix",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Transverse_Colon",
+    "displayName": "Transverse Colon",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Taenia_Omentalis",
+    "displayName": "Taenia Omentalis",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Taenia_Mesocolica",
+    "displayName": "Taenia Mesocolica",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Taenia_Libera",
+    "displayName": "Taenia Libera",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Stomach",
+    "displayName": "Stomach",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Spleen",
+    "displayName": "Spleen",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Right_Hepatic_Duct",
+    "displayName": "Right Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Rectum",
+    "displayName": "Rectum",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Posterior_Superior_Tributary_of_Right_Hepatic_Duct",
+    "displayName": "Posterior Superior Tributary of Right Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Posterior_Inferior_Tributary_of_Right_Hepatic_Duct",
+    "displayName": "Posterior Inferior Tributary of Right Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Pancreatic_Duct_Tree",
+    "displayName": "Pancreatic Duct Tree",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Pancreas_001",
+    "displayName": "Pancreas 001",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Medial_Superior_Tributary_of_Left_Hepatic_Duct",
+    "displayName": "Medial Superior Tributary of Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Medial_Inferior_Tributary_of_Left_Hepatic_Duct",
+    "displayName": "Medial Inferior Tributary of Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Left_Hepatic_Duct",
+    "displayName": "Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Lateral_Superior_Tributary_of_Left_Hepatic_Duct",
+    "displayName": "Lateral Superior Tributary of Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Lateral_Inferior_Tributary_of_Left_Hepatic_Duct",
+    "displayName": "Lateral Inferior Tributary of Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Jejunum___Ileum",
+    "displayName": "Jejunum Ileum",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_VIII",
+    "displayName": "Hepatovenous Segment VIII",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_VI",
+    "displayName": "Hepatovenous Segment VI",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_V",
+    "displayName": "Hepatovenous Segment V",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_IX",
+    "displayName": "Hepatovenous Segment IX",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_IV",
+    "displayName": "Hepatovenous Segment IV",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_III",
+    "displayName": "Hepatovenous Segment III",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Hepatovenous_Segment_II",
+    "displayName": "Hepatovenous Segment II",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Gallbladder",
+    "displayName": "Gallbladder",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Esophagus",
+    "displayName": "Esophagus",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Duodenum",
+    "displayName": "Duodenum",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Descending_Colon",
+    "displayName": "Descending Colon",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Cystic_Duct",
+    "displayName": "Cystic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Common_Hepatic_Duct",
+    "displayName": "Common Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Caudate_Lobe_Tributary_of_Left_Hepatic_Duct",
+    "displayName": "Caudate Lobe Tributary of Left Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Caudate_Lobe_of_Liver",
+    "displayName": "Caudate Lobe of Liver",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Ascending_Colon",
+    "displayName": "Ascending Colon",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Anterior_Superior_Tributary_of_Right_Hepatic_Duct",
+    "displayName": "Anterior Superior Tributary of Right Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  },
+  {
+    "meshName": "Anterior_Inferior_Tributary_of_Right_Hepatic_Duct",
+    "displayName": "Anterior Inferior Tributary of Right Hepatic Duct",
+    "organGroupTempKeys": [
+      "DIGESTIVE_SYSTEM_GROUP"
+    ],
+    "defaultStudyYear": 1
+  }
+]

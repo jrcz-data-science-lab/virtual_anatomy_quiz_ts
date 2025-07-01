@@ -1,0 +1,32 @@
+[
+  {
+    "tempKey": "ARTERIES_GROUP",
+    "groupName": "Arteries",
+    "description": "Anatomical structures belonging to the Arteries system/region.",
+    "defaultStudyYear": 1
+  },
+  {
+    "tempKey": "BONES_GROUP",
+    "groupName": "Bones",
+    "description": "Anatomical structures belonging to the Bones system/region.",
+    "defaultStudyYear": 1
+  },
+  {
+    "tempKey": "HEARTH_GROUP",
+    "groupName": "Hearth",
+    "description": "Anatomical structures belonging to the Hearth system/region.",
+    "defaultStudyYear": 1
+  },
+  {
+    "tempKey": "LUNGS_GROUP",
+    "groupName": "Lungs",
+    "description": "Anatomical structures belonging to the Lungs system/region.",
+    "defaultStudyYear": 1
+  },
+  {
+    "tempKey": "DIGESTIVE_SYSTEM_GROUP",
+    "groupName": "Digestive System",
+    "description": "Anatomical structures belonging to the Digestive System system/region.",
+    "defaultStudyYear": 1
+  }
+]
