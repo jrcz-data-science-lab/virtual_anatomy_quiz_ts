@@ -2,7 +2,8 @@
 
 ## 1. Overview
 
-The API and quiz creation system for the [Virtual Anatomy](https://github.com/jrcz-data-science-lab/Virtual-Anatomy-UE) project
+The API and quiz creation system for the [Virtual Anatomy](https://github.com/jrcz-data-science-lab/Virtual-Anatomy-UE) project. <br>
+To view the MongoDB -> SQL migration guide, see the [Migration Guide](https://github.com/jrcz-data-science-lab/virtual_anatomy_quiz_ts/blob/main/migration_guide.md) file.
 
 ## 2. Features
 
